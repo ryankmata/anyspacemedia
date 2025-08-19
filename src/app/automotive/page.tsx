@@ -1,4 +1,13 @@
+import Link from 'next/link'
+
 export default function Page() {
-    return <p>Hello Automotive</p>
-  }
+    return (
+        <main>   
+            <h1>Hello Automotive</h1>
+            <Link href="/.." className="text-blue-600 underline">
+                Return Home
+            </Link>
+        </main>
+    )
+}
   
