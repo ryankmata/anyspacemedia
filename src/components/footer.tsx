@@ -151,7 +151,6 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex items-center space-x-4 mt-6">
-            {/* addiontal social media to potentially add later
             <a
               href="#"
               aria-label="X"
@@ -173,7 +172,7 @@ const Footer = () => {
             >
               <FaInstagram size={16} />
             </a>
-            */}
+
             <a
               href="https://www.linkedin.com/company/strategicfinds/"
               rel="noopener noreferrer nofollow"
@@ -214,7 +213,7 @@ const Footer = () => {
                 Thank You!
               </h5>
               <p className="text-xs text-green-700">
-                You're now subscribed to our updates.
+                You&apos;re now subscribed to our updates.
               </p>
             </div>
           ) : (
