@@ -29,12 +29,26 @@ const LandingPage = () => {
       */}
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex flex-col items-center animate-bounce">
-          <p className="text-white/70 text-sm mb-2 tracking-wide">
-            scroll down
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <div className="flex flex-row items-center space-x-2">
+          <p className="text-white text-xs mb-2 tracking-widest font-black">
+            S C R O L L&nbsp;&nbsp;&nbsp;T O&nbsp;&nbsp;&nbsp;D I S C O V E R
           </p>
-          <ChevronDown className="w-5 h-5 text-white/70" />
+
+          <div className="flex flex-col items-center space-y-0">
+            <ChevronDown
+              className="w-5 h-5 text-white animate-chevron"
+              style={{ animationDelay: "0s" }}
+            />
+            <ChevronDown
+              className="w-5 h-5 text-white animate-chevron"
+              style={{ animationDelay: "0.2s" }}
+            />
+            <ChevronDown
+              className="w-5 h-5 text-white animate-chevron"
+              style={{ animationDelay: "0.4s" }}
+            />
+          </div>
         </div>
       </div>
 

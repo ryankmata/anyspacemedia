@@ -41,21 +41,20 @@ const Footer = () => {
 
   const { variant } = useFooterVariant();
 
-  const bgClass = variant === "cream" ? "bg-[#EFE8DE]" : "bg-[#024E4D]";
-  const bgInvertClass = variant === "cream" ? "bg-[#024E4D]" : "bg-[#EFE8DE]";
-  const textClass = variant === "cream" ? "text-[#024E4D]" : "text-[#EFE8DE]";
+  const bgClass = variant === "black" ? "bg-[#000000]" : "bg-[#FFFFFF]";
+  const bgInvertClass = variant === "black" ? "bg-[#FFD700]" : "bg-[#000000]";
+  const bgInvertClassAlt =
+    variant === "black" ? "bg-[#FFFFFF]" : "bg-[#000000]";
+  const textClass = variant === "black" ? "text-[#FFFFFF]" : "text-[#000000]";
   const textInvertClass =
-    variant === "cream" ? "text-[#EFE8DE]" : "text-[#024E4D]";
-  const imgClass =
-    variant === "cream"
-      ? "/strategicfinds_logohorizontal_teal.svg"
-      : "/strategicfinds_logohorizontal_cream.svg";
+    variant === "black" ? "text-[#000000]" : "text-[#FFFFFF]";
+  const imgClass = variant === "black" ? "/logo.png" : "/logo.png";
   const hoverClass =
-    variant === "cream"
-      ? "group-hover:text-[#C2BFB8]"
-      : "group-hover:text-[#024e4d]";
+    variant === "black"
+      ? "group-hover:text-[#000000]"
+      : "group-hover:text-[#FFFFFF]";
   const borderClass =
-    variant === "cream" ? "border-[#024e4d]/30" : "border-[#C2BFB8]/30";
+    variant === "black" ? "border-[#FFD700]/80" : "border-[#C2BFB8]/30";
 
   return (
     <footer className={`${bgClass} ${textClass} pt-16 pb-2 px-6`}>
@@ -67,15 +66,14 @@ const Footer = () => {
               <Image
                 src={`${imgClass}`}
                 alt="Strategic Finds Logo"
-                width={160}
-                height={40}
+                width={80}
+                height={80}
                 className="cursor-pointer hover:opacity-80 transition"
               />
             </Link>
           </div>
           <p className="text-sm leading-relaxed">
-            We connect business buyers and sellers through confidential, curated
-            deal-making tailored to each of our clients.
+            High-quality photo and drone media tailored to any space.
           </p>
           {/* FUTURE EDITION: IF WE HAVE A BACKEND LOGIN FOR CLIENTS
           <Link
@@ -93,22 +91,22 @@ const Footer = () => {
           <ul className="space-y-4 text-sm">
             <li>
               <a
-                href="https://www.google.com/maps?q=169+West+2710+South+Circle,+Suite+202D,+Saint+George,+Utah+84790"
+                href="https://www.google.com/maps?q=6062+Pinyon+Dr,+Saint+George,+Utah+84790"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 className=""
               >
-                169 West 2710 South Circle, Suite 202D
+                6062 S Pinyon Dr
                 <br />
                 Saint George, Utah 84790
               </a>
             </li>
             <li className="group relative w-max">
               <a
-                href="tel:+14355232220"
+                href="tel:+14352166499"
                 className={`transition-all relative z-10 px-1 ${hoverClass}`}
               >
-                +1 (435) 523-2220
+                +1 (435) 216-6499
               </a>
               <span
                 className={`absolute left-0 bottom-0 w-full h-[1px] transition-all ${bgInvertClass} z-0 group-hover:h-full`}
@@ -116,10 +114,10 @@ const Footer = () => {
             </li>
             <li className="group relative w-max">
               <a
-                href="mailto:contact@strategicfinds.com"
+                href="mailto:contact@anyspacemedia.com"
                 className={`transition-all relative z-10 px-1 ${hoverClass}`}
               >
-                contact@strategicfinds.com
+                contact@anyspacemedia.com
               </a>
               <span
                 className={`absolute left-0 bottom-0 w-full h-[1px] transition-all ${bgInvertClass} z-0 group-hover:h-full`}
@@ -151,6 +149,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex items-center space-x-4 mt-6">
+            {/* Don't need rn 
             <a
               href="#"
               aria-label="X"
@@ -158,21 +157,22 @@ const Footer = () => {
             >
               <RiTwitterXLine size={16} />
             </a>
+            */}
             <a
               href="#"
               aria-label="Facebook"
-              className={`${bgInvertClass} ${textInvertClass} p-2 rounded-full hover:opacity-80`}
+              className={`${bgInvertClassAlt} ${textInvertClass} p-2 rounded-full hover:${bgInvertClass}`}
             >
               <FaFacebookF size={16} />
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className={`${bgInvertClass} ${textInvertClass} p-2 rounded-full hover:opacity-80`}
+              className={`${bgInvertClassAlt} ${textInvertClass} p-2 rounded-full hover:${bgInvertClass}`}
             >
               <FaInstagram size={16} />
             </a>
-
+            {/* Don't need rn 
             <a
               href="https://www.linkedin.com/company/strategicfinds/"
               rel="noopener noreferrer nofollow"
@@ -181,14 +181,15 @@ const Footer = () => {
             >
               <FaLinkedinIn size={16} />
             </a>
+            */}
           </div>
         </div>
 
         {/* Column 4: Subscribe */}
         <div
-          className={`${bgInvertClass} p-6 rounded-lg -mt-6 pt-6 shadow-2xl`}
+          className={`bg-[#FFD700]/10 p-6 rounded-lg -mt-6 pt-6 shadow-2xl border-1 border-[#FFD700]/80`}
         >
-          <h4 className={`text-sm font-semibold ${textInvertClass} mb-4`}>
+          <h4 className={`text-sm font-semibold ${textClass} mb-4`}>
             Subscribe
           </h4>
 
@@ -224,7 +225,7 @@ const Footer = () => {
                   placeholder="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-grow min-w-0 px-4 py-3 text-sm text-gray-700 bg-white rounded-l-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="flex-grow min-w-0 px-4 py-3 text-sm border-l-1 border-t-1 border-b-1 border-[#FFD700] text-gray-700 bg-white rounded-l-md border focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
                 />
                 <button
                   onClick={handleSubscribe}
@@ -233,7 +234,7 @@ const Footer = () => {
                   className={`px-4 py-3 rounded-r-md transition-colors duration-200 flex items-center justify-center ${
                     status === "loading"
                       ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-[#d75d5d] hover:bg-[#a24649]"
+                      : "border-r-1 border-t-1 border-b-1 border-[#FFD700] bg-[#FFD700]/10 hover:bg-[#FFD700]/50"
                   } text-white`}
                   aria-label="Subscribe"
                 >
@@ -283,10 +284,10 @@ const Footer = () => {
                 </div>
               )}
 
-              <p className={`text-xs ${textInvertClass} leading-relaxed`}>
-                Buying or selling a business? Subscribe for early access to new
-                listings, local market insights, and tips for navigating the
-                sale or purchase process. No spam, ever.
+              <p className={`text-xs ${textClass} leading-relaxed`}>
+                Love great visuals? Subscribe for photography tips,
+                behind-the-scenes drone footage, and exclusive offers on shoots
+                across any space. No spam, just inspiration.
               </p>
             </>
           )}
@@ -300,18 +301,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-y-6 text-center md:text-left">
           {/* Left: Copyright */}
           <p className="md:justify-self-start">
-            © 2025 Strategic Finds. All rights reserved.
+            © 2025 Any Space Media. All rights reserved.
           </p>
 
           {/* Center: Zion Ops */}
           <div className="justify-self-center">
             <a
-              href="https://zion-ops.com"
+              href="https://SureFoundStrategies.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              Website by Zion Ops
+              Website by SureFound Strategies
             </a>
           </div>
 

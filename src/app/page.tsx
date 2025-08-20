@@ -2,13 +2,13 @@
 import { useEffect } from "react";
 import { useFooterVariant } from "@/context/FooterContext";
 import LandingPage from "@/components/home/00_HomeHero";
-import SpaceSelection from "@/components/home/SpaceSelection";
+import SpaceSelection from "@/components/home/01_ SpaceSelection";
 
 export default function Home() {
   const { setVariant } = useFooterVariant();
 
   useEffect(() => {
-    setVariant("cream");
+    setVariant("black");
   }, [setVariant]);
 
   return (

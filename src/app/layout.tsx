@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Manrope } from "next/font/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navigationbar";
@@ -15,6 +16,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope", // optional CSS variable
+  weight: ["400", "500", "600", "700"], // pick the weights you need
 });
 
 export const metadata: Metadata = {
@@ -72,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={manrope.variable}>
       <head>
         <link
           rel="apple-touch-icon"
@@ -94,9 +101,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body
-        className={`bg-white ${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`bg-white ${manrope.className} antialiased`}>
         <Navbar />
         <FooterVariantProvider>
           {children}

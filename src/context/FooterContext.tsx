@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useState, ReactNode } from "react";
 
-type FooterVariant = "cream" | "teal";
+type FooterVariant = "black" | "white";
 
 interface FooterVariantContextType {
   variant: FooterVariant;
@@ -26,7 +26,7 @@ export const FooterVariantProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [variant, setVariant] = useState<FooterVariant>("cream");
+  const [variant, setVariant] = useState<FooterVariant>("black");
 
   return (
     <FooterVariantContext.Provider value={{ variant, setVariant }}>
