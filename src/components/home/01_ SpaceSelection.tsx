@@ -15,7 +15,7 @@ const SpaceSelection = () => {
   return (
     <section
       id="choose_your_space"
-      className="scroll-mt-[80px] min-h-screen bg-slate-900 py-20 px-6"
+      className="scroll-mt-[80px] min-h-screen bg-black py-20 px-6"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title */}
