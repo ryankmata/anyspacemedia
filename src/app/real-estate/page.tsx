@@ -1,15 +1,22 @@
-import Link from 'next/link'
+"use client";
+import { useEffect } from "react";
+import { useFooterVariant } from "@/context/FooterContext";
+import Form from "@/components/contact/01_Form";
+import RealEstateHero from "@/components/real-estate/00_RealEstateHero";
 
-export default function Page() {
+const RealEstatePage: React.FC = () => {
+  const { setVariant } = useFooterVariant();
+
+  useEffect(() => {
+    setVariant("black");
+  }, [setVariant]);
+
   return (
-    <main className="relative min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/bkg1.jpg')` }}>
-      <div className="absolute inset-0 bg-black/50" /> {/* optional dark overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center px-4">
-        <h1 className="text-5xl font-bold mb-4">Hello Real Estate</h1>
-        <Link href="/.." className="text-lg underline hover:text-gray-300">
-          Return Home
-        </Link>
-      </div>
-    </main>
-  )
-}
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <RealEstateHero />
+      <Form />
+    </div>
+  );
+};
+
+export default RealEstatePage;

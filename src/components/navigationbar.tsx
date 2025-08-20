@@ -14,6 +14,16 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [openSpace, setOpenSpace] = useState(false);
+  const spacePaths = [
+    "/architecture-design",
+    "/automotive",
+    "/commercial",
+    "/real-estate",
+    "/rv-marine",
+  ];
+  const isSpaceActive = spacePaths.some(
+    (p) => pathname === p || pathname.startsWith(p + "/")
+  );
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 300);
@@ -30,7 +40,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navbar */}
       <nav
-        className={`hidden md:block fixed z-10 w-full transition-colors
+        className={`hidden md:block z-10 fixed w-full transition-colors
         ${
           isScrolled
             ? "bg-black/70"
@@ -183,75 +193,66 @@ const Navbar: React.FC = () => {
               >
                 HOME
               </Link>
-              <Link
-                href={isHome ? "services" : "/services"}
-                onClick={closeAll}
-                className={`block  ${
-                  pathname === "/choose-your-space"
-                    ? "text-[#FFD700]"
-                    : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+              <div
+                className="relative"
+                onMouseEnter={() => setOpenSpace(true)}
+                onMouseLeave={() => setOpenSpace(false)}
               >
-                <div
-                  className="relative"
-                  onMouseEnter={() => setOpenSpace(true)}
-                  onMouseLeave={() => setOpenSpace(false)}
-                >
-                  {/* Trigger (click for mobile, hover for desktop) */}
-                  <div className="flex flex-row items-center">
-                    <button
-                      onClick={() => setOpenSpace((v) => !v)}
-                      className={`w-full text-left px-3 py-3 ${
-                        pathname.startsWith("/spaces")
-                          ? "text-[#FFD700]"
-                          : "text-white/90"
-                      } hover:text-[#FFD700]`}
-                    >
-                      CHOOSE YOUR SPACE
-                    </button>
-                    <span className="px-4">+</span>
-                  </div>
-                  {/* Submenu */}
-                  <div
-                    className={`overflow-hidden transition-all duration-800 ${
-                      openSpace ? "max-h-60" : "max-h-0"
-                    }`}
+                {/* Trigger (click for mobile, hover for desktop) */}
+                <div className="flex flex-row items-center">
+                  <button
+                    onClick={() => setOpenSpace((v) => !v)}
+                    className={`w-full text-left px-3 py-3 font-bold tracking-wider border-b border-[#FFD700]/10
+                      ${
+                        isSpaceActive ? "text-[#FFD700]" : "text-white/90"
+                      } hover:text-[#FFD700] hover:bg-[#FFD700]/5`}
                   >
-                    <div className="flex flex-col">
-                      <Link
-                        href="/spaces/commercial"
-                        className="px-6 py-2 text-white hover:text-[#FFD700]"
-                      >
-                        Architecture & Design
-                      </Link>
-                      <Link
-                        href="/spaces/real-estate"
-                        className="px-6 py-2 text-white hover:text-[#FFD700]"
-                      >
-                        Automotive
-                      </Link>
-                      <Link
-                        href="/spaces/architecture"
-                        className="px-6 py-2 text-white hover:text-[#FFD700]"
-                      >
-                        Commercial
-                      </Link>
-                      <Link
-                        href="/spaces/architecture"
-                        className="px-6 py-2 text-white hover:text-[#FFD700]"
-                      >
-                        Real Estate
-                      </Link>
-                      <Link
-                        href="/spaces/architecture"
-                        className="px-6 py-2 mb-2 text-white hover:text-[#FFD700]"
-                      >
-                        RV & Marine
-                      </Link>
-                    </div>
+                    CHOOSE YOUR SPACE
+                  </button>
+                  <span className="px-4">+</span>
+                </div>
+
+                {/* Submenu */}
+                <div
+                  className={`overflow-hidden transition-all duration-800 ${
+                    openSpace ? "max-h-60" : "max-h-0"
+                  }`}
+                >
+                  <div className="flex flex-col">
+                    <Link
+                      href="/architecture-design"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Architecture & Design
+                    </Link>
+                    <Link
+                      href="/automotive"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Automotive
+                    </Link>
+                    <Link
+                      href="/commercial"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Commercial
+                    </Link>
+                    <Link
+                      href="/real-estate"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Real Estate
+                    </Link>
+                    <Link
+                      href="/rv-marine"
+                      className="px-6 py-2 mb-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      RV & Marine
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
+
               <Link
                 href={isHome ? "about" : "/about"}
                 onClick={closeAll}
@@ -263,7 +264,7 @@ const Navbar: React.FC = () => {
               </Link>
 
               <Link
-                href={isHome ? "process" : "/process"}
+                href={isHome ? "contact" : "/contact"}
                 onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
@@ -271,15 +272,130 @@ const Navbar: React.FC = () => {
               >
                 CONTACT US
               </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Navbar */}
+      <nav className="md:hidden fixed top-0 inset-x-0 z-50 bg-black">
+        <div className="relative flex items-center justify-between px-6 py-4">
+          {/* Logo */}
+          <div className="relative w-[64px] h-[64px]">
+            <Link href="/" onClick={closeAll}>
+              <Image src="/logo.png" alt="Any Space Media Logo" fill />
+            </Link>
+          </div>
+
+          {/* Hamburger (visible on mobile) */}
+          <button
+            onClick={() => setIsMobileMenuOpen((v) => !v)}
+            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#FFD700] hover:bg-[#FFD700]/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FFD700]"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu-panel"
+            aria-label="Open mobile menu"
+          >
+            <span className="sr-only">Open mobile menu</span>
+            <div className="w-6 h-6 flex flex-col justify-center items-center">
+              <span
+                className={`block h-0.5 w-6 bg-current transition ${
+                  isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-current transition mt-1 ${
+                  isMobileMenuOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-6 bg-current transition mt-1 ${
+                  isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                }`}
+              />
+            </div>
+          </button>
+
+          {/* Dropdown: top→down */}
+          <div
+            id="mobile-menu-panel"
+            className={`absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm shadow-xl transform transition-all duration-300 ease-in-out origin-top
+      ${
+        isMobileMenuOpen
+          ? "scale-y-100 opacity-100"
+          : "scale-y-0 opacity-0 pointer-events-none"
+      }`}
+          >
+            <div className="px-4 pt-2 pb-6 space-y-1">
               <Link
-                href={isHome ? "why-us" : "/why-us"}
+                href="/"
                 onClick={closeAll}
                 className={`block px-3 py-3 ${
-                  pathname === "/why-us" ? "text-[#FFD700]" : "text-white/90"
+                  pathname === "/" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
               >
-                WHY US
+                HOME
               </Link>
+
+              {/* CHOOSE YOUR SPACE + submenu */}
+              <div className="relative">
+                <button
+                  onClick={() => setOpenSpace((v) => !v)}
+                  className={`w-full text-left px-3 py-3 font-bold tracking-wider border-b border-[#FFD700]/10 ${
+                    isSpaceActive ? "text-[#FFD700]" : "text-white/90"
+                  } hover:text-[#FFD700] hover:bg-[#FFD700]/5`}
+                >
+                  CHOOSE YOUR SPACE
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openSpace ? "max-h-60" : "max-h-0"
+                  }`}
+                >
+                  <div className="flex flex-col">
+                    <Link
+                      href="/architecture-design"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Architecture & Design
+                    </Link>
+                    <Link
+                      href="/automotive"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Automotive
+                    </Link>
+                    <Link
+                      href="/commercial"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Commercial
+                    </Link>
+                    <Link
+                      href="/real-estate"
+                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      Real Estate
+                    </Link>
+                    <Link
+                      href="/rv-marine"
+                      className="px-6 py-2 mb-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                    >
+                      RV & Marine
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                href={isHome ? "about" : "/about"}
+                onClick={closeAll}
+                className={`block px-3 py-3 ${
+                  pathname === "/about" ? "text-[#FFD700]" : "text-white/90"
+                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+              >
+                ABOUT
+              </Link>
+
               <Link
                 href={isHome ? "contact" : "/contact"}
                 onClick={closeAll}
@@ -287,112 +403,9 @@ const Navbar: React.FC = () => {
                   pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
               >
-                CONTACT
+                CONTACT US
               </Link>
             </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile Navbar */}
-      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-[#efe8deff] backdrop-blur-sm shadow-xl">
-        <div className="px-4 sm:px-6">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex-shrink-0">
-              <Link href="/" onClick={closeAll}>
-                <Image
-                  src="/strategicfinds_logohorizontal_teal.svg" // replace for ASM
-                  alt="Any Space Media"
-                  width={140}
-                  height={140}
-                  className="object-contain"
-                />
-              </Link>
-            </div>
-
-            {/* Mobile hamburger toggles a TOP dropdown */}
-            <button
-              onClick={() => setIsMobileMenuOpen((v) => !v)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#036670] transition-colors"
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu-panel"
-              aria-label="Open mobile menu"
-            >
-              <span className="sr-only">Open mobile menu</span>
-              <div className="w-6 h-6 flex flex-col justify-center items-center">
-                <span
-                  className={`block h-0.5 w-6 bg-current transition ${
-                    isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                  }`}
-                />
-                <span
-                  className={`block h-0.5 w-6 bg-current transition mt-1 ${
-                    isMobileMenuOpen ? "opacity-0" : ""
-                  }`}
-                />
-                <span
-                  className={`block h-0.5 w-6 bg-current transition mt-1 ${
-                    isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                  }`}
-                />
-              </div>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile dropdown */}
-        <div
-          id="mobile-menu-panel"
-          className={`absolute top-full left-0 right-0 bg-[#efe8deff] backdrop-blur-sm shadow-xl transform transition-all duration-300 ease-in-out origin-top
-          ${
-            isMobileMenuOpen
-              ? "scale-y-100 opacity-100"
-              : "scale-y-0 opacity-0 pointer-events-none"
-          }`}
-        >
-          <div className="px-4 pt-2 pb-6 space-y-1">
-            <Link
-              href="/"
-              onClick={closeAll}
-              className="block px-3 py-3 text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/5 font-bold tracking-wider border-b border-[#036670]/10"
-            >
-              HOME
-            </Link>
-            <Link
-              href={isHome ? "about" : "/about"}
-              onClick={closeAll}
-              className="block px-3 py-3 text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/5 font-bold tracking-wider border-b border-[#036670]/10"
-            >
-              ABOUT
-            </Link>
-            <Link
-              href={isHome ? "services" : "/services"}
-              onClick={closeAll}
-              className="block px-3 py-3 text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/5 font-bold tracking-wider border-b border-[#036670]/10"
-            >
-              SERVICES
-            </Link>
-            <Link
-              href={isHome ? "process" : "/process"}
-              onClick={closeAll}
-              className="block px-3 py-3 text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/5 font-bold tracking-wider border-b border-[#036670]/10"
-            >
-              PROCESS
-            </Link>
-            <Link
-              href={isHome ? "why-us" : "/why-us"}
-              onClick={closeAll}
-              className="block px-3 py-3 text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/5 font-bold tracking-wider border-b border-[#036670]/10"
-            >
-              WHY US
-            </Link>
-            <Link
-              href={isHome ? "contact" : "/contact"}
-              onClick={closeAll}
-              className="block px-3 py-3 text-[#036670] hover:text-[#00a5b7] hover:bg-[#036670]/5 font-bold tracking-wider"
-            >
-              CONTACT
-            </Link>
           </div>
         </div>
       </nav>

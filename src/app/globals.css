@@ -39,3 +39,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* show neighbors and style center vs sides */
+.coverflow .slick-list { overflow: visible; }
+.coverflow .slick-track { display: flex; }
+
+.coverflow .slick-slide > div { transition: transform .6s, filter .6s, opacity .6s, z-index .3s; }
+.coverflow .slick-slide { z-index: 0; }
+.coverflow .slick-center { z-index: 2; }
+

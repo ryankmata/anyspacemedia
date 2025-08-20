@@ -1,13 +1,22 @@
-import Link from 'next/link'
+"use client";
+import { useEffect } from "react";
+import { useFooterVariant } from "@/context/FooterContext";
+import Form from "@/components/contact/01_Form";
+import AutomotiveHero from "@/components/automotive/00_AutomotiveHero";
 
-export default function Page() {
-    return (
-        <main>   
-            <h1>Hello Automotive</h1>
-            <Link href="/.." className="text-blue-600 underline">
-                Return Home
-            </Link>
-        </main>
-    )
-}
-  
+const AutomotivePage: React.FC = () => {
+  const { setVariant } = useFooterVariant();
+
+  useEffect(() => {
+    setVariant("black");
+  }, [setVariant]);
+
+  return (
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <AutomotiveHero />
+      <Form />
+    </div>
+  );
+};
+
+export default AutomotivePage;

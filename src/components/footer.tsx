@@ -296,7 +296,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div
-        className={`border-t ${borderClass} mt-10 py-8 text-sm ${textClass}`}
+        className={`border-t ${borderClass} mt-10 py-8 text-xs ${textClass}`}
       >
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-y-6 text-center md:text-left">
           {/* Left: Copyright */}
