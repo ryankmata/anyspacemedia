@@ -1,42 +1,20 @@
 "use client";
-import dynamic from "next/dynamic";
-
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, A11y } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 
 export default function Showcase() {
   const [current, setCurrent] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Trigger animations on component mount
+  const [swiper, setSwiper] = useState<SwiperType | null>(null);
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
-    speed: 800,
-    cssEase: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "280px",
-    focusOnSelect: true,
-    beforeChange: (_: number, next: number) => setCurrent(next),
-    responsive: [
-      { breakpoint: 1280, settings: { centerPadding: "200px" } },
-      { breakpoint: 1024, settings: { centerPadding: "150px" } },
-      { breakpoint: 768, settings: { centerPadding: "80px" } },
-      { breakpoint: 640, settings: { centerPadding: "40px" } },
-    ],
-  };
 
   const cards = [
     {
@@ -80,12 +58,12 @@ export default function Showcase() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black">
       <div className="container mx-auto px-4">
-        {/* Animated Title */}
+        {/* Title */}
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
@@ -99,153 +77,157 @@ export default function Showcase() {
           </p>
         </motion.div>
 
-        {/* Animated Carousel */}
+        {/* Carousel */}
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           className="relative"
         >
-          <Slider {...settings} className="showcase-carousel">
+          <Swiper
+            modules={[Autoplay, Pagination, A11y]}
+            onSwiper={setSwiper}
+            onSlideChange={(swiperInstance) => {
+              setCurrent(swiperInstance.realIndex);
+            }}
+            loop={true}
+            centeredSlides={true}
+            slidesPerView={3}
+            spaceBetween={30}
+            grabCursor={true}
+            initialSlide={0}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2.2,
+                spaceBetween: 25,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+            className="showcase-swiper"
+          >
             {cards.map((card, index) => {
-              const active = index === current;
+              const isActive = index === current;
               return (
-                <div key={card.id} className="px-4">
-                  <motion.div
-                    initial={{ opacity: 0.5, scale: 0.85, y: 20 }}
-                    animate={
-                      active
-                        ? {
-                            opacity: 1,
-                            scale: 1,
-                            y: 0,
-                            filter: "blur(0px)",
-                            rotateY: 0,
-                          }
-                        : {
-                            opacity: 0.4,
-                            scale: 0.8,
-                            y: 20,
-                            filter: "blur(3px)",
-                            rotateY: active ? 0 : 15,
-                          }
-                    }
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    className={`relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer group ${
-                      active ? "z-10" : "z-0"
+                <SwiperSlide key={card.id}>
+                  <div
+                    className={`relative rounded-3xl overflow-hidden shadow-2xl group h-[400px] bg-black transition-all duration-500 ${
+                      isActive ? "shadow-3xl" : "shadow-lg"
                     }`}
-                    style={{ height: "400px" }}
                   >
-                    {/* Background Image */}
+                    {/* Background image */}
                     <div className="absolute inset-0">
                       <img
                         src={card.image}
                         alt={card.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className={`w-full h-full object-cover transition-transform duration-700 ${
+                          isActive ? "group-hover:scale-110" : "scale-105"
+                        }`}
+                        loading="lazy"
                       />
-
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      {/* Animated overlay on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#B8860B]/10 via-[#FFD700]/10 to-[#DAA520]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
 
+                    {/* Overlay gradients - stronger on inactive cards */}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-500 ${
+                        isActive ? "" : "opacity-80"
+                      }`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#B8860B]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                     {/* Content */}
-                    <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+                    <div
+                      className={`relative z-10 h-full flex flex-col justify-end p-8 text-white transition-all duration-500 ${
+                        isActive ? "opacity-100" : "opacity-70"
+                      }`}
+                    >
                       <motion.h3
-                        className="text-3xl font-bold mb-3 group-hover:text-[#FFD700] transition-colors duration-300"
+                        className={`text-2xl md:text-3xl font-bold mb-3 transition-colors duration-300 ${
+                          isActive
+                            ? "group-hover:text-[#FFD700]"
+                            : "text-gray-200"
+                        }`}
                         initial={{ y: 20, opacity: 0 }}
-                        animate={
-                          active ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }
-                        }
+                        whileInView={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                       >
                         {card.title}
                       </motion.h3>
+
                       <motion.p
-                        className="text-gray-300 text-lg opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                        className={`text-base md:text-lg mb-6 transition-opacity duration-300 ${
+                          isActive
+                            ? "text-gray-300 opacity-90 group-hover:opacity-100"
+                            : "text-gray-400 opacity-70"
+                        }`}
                         initial={{ y: 20, opacity: 0 }}
-                        animate={
-                          active ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }
-                        }
+                        whileInView={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.5 }}
                       >
                         {card.description}
                       </motion.p>
 
-                      {/* View More Button - appears on active slide */}
-                      <motion.div
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={
-                          active ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }
-                        }
-                        transition={{ delay: 0.6, duration: 0.5 }}
-                      >
-                        <Link
-                          href={card.link}
-                          className="mt-6 inline-block px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm 
-               border border-white/30 rounded-full text-white font-semibold transition-all 
-               duration-300 hover:scale-105 self-start"
+                      {/* Button only shows and animates in when card is active/centered */}
+                      {isActive && (
+                        <motion.div
+                          initial={{ y: 30, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          exit={{ y: 30, opacity: 0 }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
                         >
-                          Explore Services →
-                        </Link>
-                      </motion.div>
+                          <Link
+                            href={card.link}
+                            className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:border-[#FFD700]/50"
+                          >
+                            Explore Services
+                            <svg
+                              className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                          </Link>
+                        </motion.div>
+                      )}
                     </div>
 
                     {/* Active indicator */}
-                    {active && (
+                    {index === current && (
                       <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="absolute top-6 right-6 w-4 h-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] rounded-full shadow-lg"
+                        className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full shadow-lg"
                       />
                     )}
-                  </motion.div>
-                </div>
+                  </div>
+                </SwiperSlide>
               );
             })}
-          </Slider>
+          </Swiper>
         </motion.div>
       </div>
-
-      {/* Custom Styles for Slick Carousel */}
-      <style jsx global>{`
-        .showcase-carousel .slick-dots {
-          bottom: -60px;
-        }
-
-        .showcase-carousel .slick-dots li button:before {
-          color: white;
-          font-size: 12px;
-          opacity: 0.5;
-          transition: all 0.3s ease;
-        }
-
-        .showcase-carousel .slick-dots li.slick-active button:before {
-          opacity: 1;
-          color: #60a5fa;
-          transform: scale(1.2);
-        }
-
-        .showcase-carousel .slick-dots li button:hover:before {
-          opacity: 0.8;
-        }
-
-        /* Hide default arrows */
-        .showcase-carousel .slick-prev,
-        .showcase-carousel .slick-next {
-          display: none !important;
-        }
-
-        /* Ensure smooth transitions */
-        .showcase-carousel .slick-slide {
-          transition: all 0.3s ease;
-        }
-
-        .showcase-carousel .slick-center .card {
-          transform: scale(1);
-        }
-      `}</style>
     </section>
   );
 }
