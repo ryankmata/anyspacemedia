@@ -273,14 +273,14 @@ export default function Showcase() {
                       )}
                     </div>
 
-                    {/* Active indicator */}
+                    {/* Active indicator 
                     {index === current && (
                       <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full shadow-lg"
                       />
-                    )}
+                    )}*/}
                   </div>
                 </SwiperSlide>
               );

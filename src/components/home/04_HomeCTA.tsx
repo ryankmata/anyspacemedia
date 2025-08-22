@@ -9,7 +9,7 @@ const CTABand = () => {
   }, []);
 
   return (
-    <section className="relative py-20 bg-black overflow-hidden">
+    <section className="relative z-9 py-20 bg-black overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/20 to-[#DAA520]/10 animate-pulse" />

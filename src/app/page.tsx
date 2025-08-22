@@ -15,7 +15,7 @@ export default function Home() {
   }, [setVariant]);
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-black overflow-x-hidden">
       <HomeHero />
       <SpaceSelection />
       <WhyChooseUs />

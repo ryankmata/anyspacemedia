@@ -40,10 +40,10 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navbar */}
       <nav
-        className={`hidden md:block z-10 fixed w-full transition-colors
+        className={`hidden md:block z-10 fixed w-full transition duration-1000
         ${
           isScrolled
-            ? "bg-black/70"
+            ? "bg-black/85"
             : "bg-gradient-to-b from-black to-transparent"
         }`}
       >

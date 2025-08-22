@@ -5,7 +5,7 @@
 @import "swiper/css/effect-coverflow"; /* optional */
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
 }
 
@@ -132,7 +132,7 @@ body {
 }
 
 .showcase-swiper .swiper-pagination-bullets {
-  bottom: -60px !important;
+  bottom: 0px !important;
   text-align: center;
 }
 

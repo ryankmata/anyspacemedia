@@ -7,9 +7,12 @@ const AutomotiveHero = () => {
       {/* Media block (image now, video later) */}
       <section className="relative w-full md:min-h-[calc(100vh)] overflow-hidden">
         {/* Media */}
-        <img
-          src="/bkg.jpg"
-          alt=""
+        <video
+          src="/Automotive.mp4" // replace with your video file
+          autoPlay
+          loop
+          muted
+          playsInline
           className="
             block w-full h-auto
             md:absolute md:inset-0 md:w-full md:h-full md:object-cover

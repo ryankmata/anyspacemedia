@@ -1,6 +1,4 @@
 "use client";
-import React, { useState } from "react";
-import AutoPlay from "../carousel";
 import Showcase from "../carousel";
 
 const SpaceSelection = () => {

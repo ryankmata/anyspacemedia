@@ -38,20 +38,20 @@ const WhyChooseUs = () => {
   const stats = [
     { number: "8+", label: "Years in Business" },
     { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Luxury Brands" },
+    { number: "50+", label: "Clients & Brands" },
     { number: "99%", label: "Client Satisfaction" },
   ];
 
   const clientLogos = [
-    "Luxury Real Estate Co.",
-    "Premium Automotive",
-    "Elite Architecture",
-    "High-End Commercial",
-    "Luxury Marine",
+    "Parade of Homes",
+    "Red Ledges",
+    "Split Rock Custom Homes",
+    "Utah Style & Design",
+    "Habitations Residential Design Group",
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 relative overflow-hidden">
+    <section className="py-24 z-9 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#B8860B]/5 to-transparent opacity-30" />
 
@@ -70,8 +70,8 @@ const WhyChooseUs = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We don't just capture images—we craft visual experiences that define
-            luxury and elevate your brand above the competition.
+            We don't just capture images, we craft visual experiences that
+            define luxury and elevate your brand above the competition.
           </p>
         </motion.div>
 
@@ -129,7 +129,7 @@ const WhyChooseUs = () => {
           className="text-center mb-12"
         >
           <h3 className="text-2xl font-bold text-white mb-8">
-            Trusted by Luxury Brands
+            Some of Our Clients
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             {clientLogos.map((logo, index) => (
