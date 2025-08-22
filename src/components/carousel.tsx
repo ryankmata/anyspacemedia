@@ -9,7 +9,6 @@ import type { Swiper as SwiperType } from "swiper";
 export default function Showcase() {
   const [current, setCurrent] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
   useEffect(() => {
@@ -57,6 +56,24 @@ export default function Showcase() {
     },
   ];
 
+  const goToSlide = (index: number) => {
+    if (swiper) {
+      swiper.slideToLoop(index);
+    }
+  };
+
+  const nextSlide = () => {
+    if (swiper) {
+      swiper.slideNext();
+    }
+  };
+
+  const prevSlide = () => {
+    if (swiper) {
+      swiper.slidePrev();
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black">
       <div className="container mx-auto px-4">
@@ -77,13 +94,53 @@ export default function Showcase() {
           </p>
         </motion.div>
 
-        {/* Carousel */}
+        {/* Carousel Container with more height */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-          className="relative"
+          className="relative min-h-[600px] flex items-center"
         >
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
           <Swiper
             modules={[Autoplay, Pagination, A11y]}
             onSwiper={setSwiper}
@@ -92,7 +149,7 @@ export default function Showcase() {
             }}
             loop={true}
             centeredSlides={true}
-            slidesPerView={3}
+            slidesPerView="auto"
             spaceBetween={30}
             grabCursor={true}
             initialSlide={0}
@@ -107,27 +164,30 @@ export default function Showcase() {
             }}
             breakpoints={{
               320: {
-                slidesPerView: 1.5,
                 spaceBetween: 20,
               },
               640: {
-                slidesPerView: 2.2,
                 spaceBetween: 25,
               },
               1024: {
-                slidesPerView: 3,
                 spaceBetween: 30,
               },
+              1280: {
+                spaceBetween: 40,
+              },
             }}
-            className="showcase-swiper"
+            className="showcase-swiper w-full"
           >
             {cards.map((card, index) => {
               const isActive = index === current;
               return (
-                <SwiperSlide key={card.id}>
+                <SwiperSlide key={card.id} className="swiper-slide-custom">
                   <div
-                    className={`relative rounded-3xl overflow-hidden shadow-2xl group h-[400px] bg-black transition-all duration-500 ${
-                      isActive ? "shadow-3xl" : "shadow-lg"
+                    onClick={() => !isActive && goToSlide(index)}
+                    className={`relative rounded-3xl overflow-hidden shadow-2xl group h-[450px] bg-black transition-all duration-500 cursor-pointer ${
+                      isActive
+                        ? "shadow-3xl scale-100 opacity-100"
+                        : "shadow-lg scale-90 opacity-75 hover:scale-95 hover:opacity-90"
                     }`}
                   >
                     {/* Background image */}

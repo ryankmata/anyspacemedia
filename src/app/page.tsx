@@ -1,8 +1,11 @@
 "use client";
 import { useEffect } from "react";
 import { useFooterVariant } from "@/context/FooterContext";
-import LandingPage from "@/components/home/00_HomeHero";
+import HomeHero from "@/components/home/00_HomeHero";
 import SpaceSelection from "@/components/home/01_ SpaceSelection";
+import WhyChooseUs from "@/components/home/02_WhyChooseUs";
+import ShowcaseGalleries from "@/components/home/03_ShowcaseGallery";
+import CTABand from "@/components/home/04_HomeCTA";
 
 export default function Home() {
   const { setVariant } = useFooterVariant();
@@ -13,8 +16,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <LandingPage />
+      <HomeHero />
       <SpaceSelection />
+      <WhyChooseUs />
+      <ShowcaseGalleries />
+      <CTABand />
     </div>
   );
 }
