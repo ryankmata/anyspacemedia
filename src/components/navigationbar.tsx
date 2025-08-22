@@ -31,6 +31,13 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Auto-close menus when pathname changes
+  useEffect(() => {
+    setIsDesktopMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    setOpenSpace(false);
+  }, [pathname]);
+
   const closeAll = () => {
     setIsDesktopMenuOpen(false);
     setIsMobileMenuOpen(false);
@@ -186,7 +193,6 @@ const Navbar: React.FC = () => {
             <div className="px-4 pt-4 pb-6 space-y-1">
               <Link
                 href="/"
-                onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
@@ -255,7 +261,6 @@ const Navbar: React.FC = () => {
 
               <Link
                 href={isHome ? "about" : "/about"}
-                onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/about" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
@@ -265,7 +270,6 @@ const Navbar: React.FC = () => {
 
               <Link
                 href={isHome ? "contact" : "/contact"}
-                onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
@@ -328,7 +332,6 @@ const Navbar: React.FC = () => {
             <div className="px-4 pt-2 pb-6 space-y-1">
               <Link
                 href="/"
-                onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
@@ -388,7 +391,6 @@ const Navbar: React.FC = () => {
 
               <Link
                 href={isHome ? "about" : "/about"}
-                onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/about" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
@@ -398,7 +400,6 @@ const Navbar: React.FC = () => {
 
               <Link
                 href={isHome ? "contact" : "/contact"}
-                onClick={closeAll}
                 className={`block px-3 py-3 ${
                   pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
                 } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}

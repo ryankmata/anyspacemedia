@@ -169,7 +169,7 @@ const ShowcaseGalleries = () => {
           ))}
         </motion.div>
 
-        {/* Stats Row */}
+        {/* Stats Row 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -200,7 +200,7 @@ const ShowcaseGalleries = () => {
             </div>
             <div className="text-gray-400">Support Available</div>
           </div>
-        </motion.div>
+        </motion.div>*/}
 
         {/* CTA Button */}
         <motion.div

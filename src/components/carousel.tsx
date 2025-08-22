@@ -76,6 +76,11 @@ export default function Showcase() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />
+      </div>
       <div className="container mx-auto px-4">
         {/* Title */}
         <motion.div
@@ -104,7 +109,7 @@ export default function Showcase() {
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
+            className="absolute left-4 bottom-5 md:top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
           >
             <svg
               className="w-6 h-6"
@@ -124,7 +129,7 @@ export default function Showcase() {
           {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
+            className="absolute right-4 bottom-5 md:top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
           >
             <svg
               className="w-6 h-6"

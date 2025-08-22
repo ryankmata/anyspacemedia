@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const WhyChooseUs = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,28 +11,251 @@ const WhyChooseUs = () => {
 
   const features = [
     {
-      icon: "👑",
-      title: "Luxury Positioning",
+      icon: (
+        <svg
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-12 h-12"
+        >
+          {/* Camera body */}
+          <rect
+            x="8"
+            y="18"
+            width="32"
+            height="20"
+            rx="3"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Lens */}
+          <circle
+            cx="24"
+            cy="28"
+            r="8"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="24"
+            cy="28"
+            r="4"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Viewfinder */}
+          <rect
+            x="14"
+            y="12"
+            width="20"
+            height="8"
+            rx="2"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Focus point */}
+          <circle cx="24" cy="28" r="1" fill="currentColor" />
+        </svg>
+      ),
+      title: "Visionary Perspective",
       description:
-        "Premium media production that elevates your brand with sophisticated storytelling and cinematic quality.",
+        "Every shot begins with structure, form, and intention. We don't just capture spaces, we reveal the vision by blending precise composition with cinematic motion. It's media that resonates on a deeper level, conveying design, context, and feeling all at once.",
     },
     {
-      icon: "🎬",
-      title: "Professional Team",
+      icon: (
+        <svg
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-12 h-12"
+        >
+          {/* Drone body */}
+          <ellipse
+            cx="24"
+            cy="24"
+            rx="8"
+            ry="4"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Propellers */}
+          <circle
+            cx="14"
+            cy="14"
+            r="6"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="34"
+            cy="14"
+            r="6"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="14"
+            cy="34"
+            r="6"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="34"
+            cy="34"
+            r="6"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Arms connecting to propellers */}
+          <line
+            x1="18"
+            y1="20"
+            x2="14"
+            y2="14"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <line
+            x1="30"
+            y1="20"
+            x2="34"
+            y2="14"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <line
+            x1="18"
+            y1="28"
+            x2="14"
+            y2="34"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <line
+            x1="30"
+            y1="28"
+            x2="34"
+            y2="34"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+        </svg>
+      ),
+      title: "Elevated Image Making",
       description:
-        "Award-winning photographers and cinematographers with decades of combined experience in luxury media.",
+        "Integrated drone, video, and still work ensures we show your space in full dimensionality. Aerial drone sequences offer dynamic context. Cinematic narratives deliver movement. Retouched stills preserve textures and finishes. It's disciplines merged, with masterful control.",
     },
     {
-      icon: "📡",
-      title: "Cutting-Edge Equipment",
+      icon: (
+        <svg
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-12 h-12"
+        >
+          {/* Award/Medal circle */}
+          <circle
+            cx="24"
+            cy="20"
+            r="12"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Inner star/excellence symbol */}
+          <path
+            d="M24 12L26.4 18.8H33.6L28.1 23.2L30.5 30L24 25.6L17.5 30L19.9 23.2L14.4 18.8H21.6L24 12Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Ribbon */}
+          <path
+            d="M18 28L24 32L30 28V42L24 38L18 42V28Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+        </svg>
+      ),
+      title: "Proven Expertise",
       description:
-        "State-of-the-art cameras, professional drones, and advanced post-production technology for stunning results.",
+        "With 20+ years of hands-on experience in real estate, architecture, and media, we understand what makes a property shine. Our team blends technical skill with creative vision, delivering results that consistently exceed expectations.",
     },
     {
-      icon: "🌍",
-      title: "Nationwide Reach",
+      icon: (
+        <svg
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-12 h-12"
+        >
+          {/* Clock face */}
+          <circle
+            cx="24"
+            cy="24"
+            r="18"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+
+          {/* Clock hands pointing to precise time */}
+          <line
+            x1="24"
+            y1="24"
+            x2="24"
+            y2="12"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+          <line
+            x1="24"
+            y1="24"
+            x2="32"
+            y2="24"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+
+          {/* Hour markers */}
+          <circle cx="24" cy="8" r="1" fill="currentColor" />
+          <circle cx="38" cy="24" r="1" fill="currentColor" />
+          <circle cx="24" cy="40" r="1" fill="currentColor" />
+          <circle cx="10" cy="24" r="1" fill="currentColor" />
+
+          {/* Precision indicators */}
+          <circle cx="35" cy="13" r="1" fill="currentColor" />
+          <circle cx="35" cy="35" r="1" fill="currentColor" />
+          <circle cx="13" cy="35" r="1" fill="currentColor" />
+          <circle cx="13" cy="13" r="1" fill="currentColor" />
+
+          {/* Center dot */}
+          <circle cx="24" cy="24" r="2" fill="currentColor" />
+        </svg>
+      ),
+      title: "Cultivated Reliability",
       description:
-        "Coast-to-coast coverage with local expertise, bringing our luxury standards to your location.",
+        "Shooting your space requires nuance, dignity, and precision. We arrive early, adapt for light, manage drones safely and professionally, and deliver curated galleries with polished drive-time turnaround. Your vision comes alive—on time, on point, every frame.",
     },
   ];
 
@@ -64,10 +288,10 @@ const WhyChooseUs = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Why Choose{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
-              Any Space Media
-            </span>
+              Excellence
+            </span>{" "}
+            in Every Frame
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We don't just capture images, we craft visual experiences that
@@ -89,7 +313,7 @@ const WhyChooseUs = () => {
               }}
               className="bg-gradient-to-b from-white/5 to-white/2 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300 group hover:transform hover:scale-105"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 text-[#FFD700]">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#FFD700] transition-colors duration-300">
@@ -150,22 +374,24 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
           className="text-center"
         >
-          <button className="group inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/25 transition-all duration-300 hover:scale-105">
-            Explore Our Work
-            <svg
-              className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+          <Link href="/#choose_your_space">
+            <button className="group inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/25 transition-all duration-300 hover:scale-105">
+              Choose Your Space
+              <svg
+                className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>

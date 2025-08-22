@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const Form: React.FC = () => {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -89,8 +89,8 @@ const Form: React.FC = () => {
         </svg>
       ),
       label: "Phone",
-      value: "(435) 523-2220",
-      link: "tel:+14355232220",
+      value: "(435) 216-6499",
+      link: "tel:+14352166499",
     },
     {
       icon: (
@@ -109,8 +109,8 @@ const Form: React.FC = () => {
         </svg>
       ),
       label: "Email",
-      value: "contact@strategicfinds.com",
-      link: "mailto:contact@strategicfinds.com",
+      value: "contact@anyspacemedia.com",
+      link: "mailto:contact@anyspacemedia.com",
     },
     {
       icon: (
@@ -134,10 +134,10 @@ const Form: React.FC = () => {
           />
         </svg>
       ),
-      label: "Office",
-      value: "Saint George, UT",
+      label: "Service Area",
+      value: "Mountain & Western U.S.",
       subvalue:
-        "169 West 2710 South Circle, Suite 202D, Saint George, UT 84790",
+        "Specializing in luxury properties across Utah, Colorado, Nevada, and beyond",
     },
     {
       icon: (
@@ -155,29 +155,51 @@ const Form: React.FC = () => {
           />
         </svg>
       ),
-      label: "Business Hours",
-      value: "Mon–Fri, 9am – 5pm MT",
-      subvalue: "Available by appointment outside regular hours",
+      label: "Response Time",
+      value: "Same Day Response",
+      subvalue:
+        "Available for urgent projects and consultations outside regular hours",
     },
   ];
 
   return (
-    <div id="contact-form" className="min-h-screen bg-[#f3f7f8] scroll-mt-22">
+    <div
+      id="contact-form"
+      className="min-h-screen z-8 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 scroll-mt-22"
+    >
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/5 via-[#FFD700]/10 to-[#DAA520]/5 opacity-50" />
+      </div>
+
       {/* Main Contact Section */}
-      <div className="py-20">
+      <div className="relative z-8 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+                Get in Touch
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Ready to capture something extraordinary? Let's discuss your
+              vision and create visual content that defines luxury.
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-              <h2 className="text-2xl font-bold text-[#036670] mb-6">
-                Send Us a Message
-              </h2>
+            <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#FFD700]/20 p-8 md:p-12">
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                Start Your Project
+              </h3>
 
               {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
+                <div className="bg-gradient-to-r from-[#B8860B]/20 to-[#FFD700]/20 border border-[#FFD700]/30 rounded-2xl p-8 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full mb-4">
                     <svg
-                      className="w-6 h-6 text-green-600"
+                      className="w-8 h-8 text-black"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -190,11 +212,11 @@ const Form: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-green-800 mb-2">
+                  <h4 className="text-2xl font-bold text-[#FFD700] mb-2">
                     Thank You!
-                  </h3>
-                  <p className="text-green-700">
-                    We will be in touch within 1 business day.
+                  </h4>
+                  <p className="text-gray-300 text-lg">
+                    We'll be in touch within 24 hours to discuss your project.
                   </p>
                 </div>
               ) : (
@@ -204,7 +226,7 @@ const Form: React.FC = () => {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="block text-sm font-medium text-[#4c4c4c] mb-2"
+                        className="block text-sm font-semibold text-[#FFD700] mb-2"
                       >
                         First Name *
                       </label>
@@ -215,14 +237,14 @@ const Form: React.FC = () => {
                         required
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#036670] focus:border-[#036670] transition-colors duration-200"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
                         placeholder="John"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="lastName"
-                        className="block text-sm font-medium text-[#4c4c4c] mb-2"
+                        className="block text-sm font-semibold text-[#FFD700] mb-2"
                       >
                         Last Name *
                       </label>
@@ -233,7 +255,7 @@ const Form: React.FC = () => {
                         required
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#036670] focus:border-[#036670] transition-colors duration-200"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
                         placeholder="Smith"
                       />
                     </div>
@@ -243,7 +265,7 @@ const Form: React.FC = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-[#4c4c4c] mb-2"
+                      className="block text-sm font-semibold text-[#FFD700] mb-2"
                     >
                       Email Address *
                     </label>
@@ -254,7 +276,7 @@ const Form: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#036670] focus:border-[#036670] transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -263,10 +285,10 @@ const Form: React.FC = () => {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-[#4c4c4c] mb-2"
+                      className="block text-sm font-semibold text-[#FFD700] mb-2"
                     >
                       Phone Number
-                      <span className="text-gray-500 text-xs ml-1">
+                      <span className="text-gray-400 text-xs ml-1 font-normal">
                         (optional)
                       </span>
                     </label>
@@ -276,7 +298,7 @@ const Form: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#036670] focus:border-[#036670] transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -285,21 +307,62 @@ const Form: React.FC = () => {
                   <div>
                     <label
                       htmlFor="inquiryType"
-                      className="block text-sm font-medium text-[#4c4c4c] mb-2"
+                      className="block text-sm font-semibold text-[#FFD700] mb-2"
                     >
-                      I am interested in:
+                      Project Type:
                     </label>
                     <select
                       id="inquiryType"
                       name="inquiryType"
                       value={formData.inquiryType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#036670] focus:border-[#036670] transition-colors duration-200 bg-white"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white"
                     >
-                      <option value="">Please select...</option>
-                      <option value="selling">Selling my business</option>
-                      <option value="buying">Buying a business</option>
-                      <option value="general">General inquiry</option>
+                      <option value="" className="bg-neutral-800 text-white">
+                        Please select...
+                      </option>
+                      <option
+                        value="real-estate"
+                        className="bg-neutral-800 text-white"
+                      >
+                        Real Estate Photography
+                      </option>
+                      <option
+                        value="architecture"
+                        className="bg-neutral-800 text-white"
+                      >
+                        Architecture & Design
+                      </option>
+                      <option
+                        value="commercial"
+                        className="bg-neutral-800 text-white"
+                      >
+                        Commercial Space
+                      </option>
+                      <option
+                        value="drone"
+                        className="bg-neutral-800 text-white"
+                      >
+                        Drone Cinematography
+                      </option>
+                      <option
+                        value="automotive"
+                        className="bg-neutral-800 text-white"
+                      >
+                        Automotive
+                      </option>
+                      <option
+                        value="rv-marine"
+                        className="bg-neutral-800 text-white"
+                      >
+                        RV & Marine
+                      </option>
+                      <option
+                        value="other"
+                        className="bg-neutral-800 text-white"
+                      >
+                        Other/Custom Project
+                      </option>
                     </select>
                   </div>
 
@@ -307,9 +370,9 @@ const Form: React.FC = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-[#4c4c4c] mb-2"
+                      className="block text-sm font-semibold text-[#FFD700] mb-2"
                     >
-                      Message *
+                      Project Details *
                     </label>
                     <textarea
                       id="message"
@@ -318,8 +381,8 @@ const Form: React.FC = () => {
                       rows={5}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#036670] focus:border-[#036670] transition-colors duration-200 resize-vertical"
-                      placeholder="Tell us about your business goals and how we can help..."
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 resize-vertical text-white placeholder-gray-400"
+                      placeholder="Tell us about your space, timeline, and vision. What story do you want to tell?"
                     />
                   </div>
 
@@ -327,10 +390,10 @@ const Form: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${
+                    className={`w-full font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 shadow-lg transform hover:scale-105 ${
                       isSubmitting
-                        ? "bg-gray-400 cursor-not-allowed text-white"
-                        : "bg-[#036670] hover:bg-[#036670]/90 text-white"
+                        ? "bg-gray-600 cursor-not-allowed text-white"
+                        : "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black hover:shadow-2xl hover:shadow-[#FFD700]/25"
                     }`}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
@@ -338,8 +401,8 @@ const Form: React.FC = () => {
                 </form>
               )}
               {submitError && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-4">
-                  <p className="text-red-700">{submitError}</p>
+                <div className="bg-red-500/20 border border-red-500/30 rounded-xl p-4 mt-4">
+                  <p className="text-red-300">{submitError}</p>
                 </div>
               )}
             </div>
@@ -347,12 +410,12 @@ const Form: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-[#036670] mb-6">
-                  Get in Touch Directly
-                </h2>
-                <p className="text-lg text-[#4c4c4c]/80 leading-relaxed mb-8">
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Ready to Connect?
+                </h3>
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
                   Prefer to reach out directly? We're here to help through any
-                  of these channels:
+                  of these channels and can discuss your project immediately.
                 </p>
               </div>
 
@@ -360,32 +423,32 @@ const Form: React.FC = () => {
                 {contactInfo.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                    className="group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#FFD700]/10"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-[#036670]/10 rounded-lg flex items-center justify-center text-[#036670]">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700]/30 to-[#B8860B]/30 rounded-xl flex items-center justify-center text-[#FFD700] group-hover:scale-110 transition-transform duration-300">
                           {item.icon}
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-[#036670] mb-1">
+                        <h4 className="font-bold text-[#FFD700] mb-1 group-hover:text-white transition-colors duration-300">
                           {item.label}
-                        </h3>
+                        </h4>
                         {item.link ? (
                           <a
                             href={item.link}
-                            className="text-[#4c4c4c] hover:text-[#036670] transition-colors duration-200 font-medium"
+                            className="text-white hover:text-[#FFD700] transition-colors duration-200 font-medium text-lg"
                           >
                             {item.value}
                           </a>
                         ) : (
-                          <p className="text-[#4c4c4c] font-medium">
+                          <p className="text-white font-medium text-lg">
                             {item.value}
                           </p>
                         )}
                         {item.subvalue && (
-                          <p className="text-[#4c4c4c]/70 text-sm mt-1">
+                          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
                             {item.subvalue}
                           </p>
                         )}
@@ -395,18 +458,18 @@ const Form: React.FC = () => {
                 ))}
               </div>
 
-              {/* Additional Links */}
-              <div className="bg-[#036670]/5 rounded-xl p-6">
-                <h3 className="font-semibold text-[#036670] mb-4">
-                  Not Ready to Contact Us Yet?
-                </h3>
+              {/* Additional Services */}
+              <div className="bg-gradient-to-r from-[#B8860B]/20 via-[#FFD700]/20 to-[#DAA520]/20 rounded-2xl p-6 border border-[#FFD700]/30">
+                <h4 className="font-bold text-[#FFD700] mb-4 text-lg">
+                  Want to Learn More First?
+                </h4>
                 <div className="space-y-3">
                   <Link
-                    href="/services"
-                    className="flex items-center text-[#4c4c4c] hover:text-[#036670] transition-colors duration-200"
+                    href="/gallery"
+                    className="flex items-center text-gray-300 hover:text-[#FFD700] transition-colors duration-200"
                   >
                     <svg
-                      className="w-4 h-4 mr-2"
+                      className="w-4 h-4 mr-3 text-[#FFD700]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -418,14 +481,14 @@ const Form: React.FC = () => {
                         d="M9 5l7 7-7 7"
                       />
                     </svg>
-                    Learn more about our services
+                    Explore our portfolio and recent work
                   </Link>
                   <Link
-                    href="/process"
-                    className="flex items-center text-[#4c4c4c] hover:text-[#036670] transition-colors duration-200"
+                    href="/services"
+                    className="flex items-center text-gray-300 hover:text-[#FFD700] transition-colors duration-200"
                   >
                     <svg
-                      className="w-4 h-4 mr-2"
+                      className="w-4 h-4 mr-3 text-[#FFD700]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -437,14 +500,14 @@ const Form: React.FC = () => {
                         d="M9 5l7 7-7 7"
                       />
                     </svg>
-                    Understand our process
+                    Learn about our services and pricing
                   </Link>
                   <a
-                    href="mailto:info@strategicfinds.com"
-                    className="flex items-center text-[#4c4c4c] hover:text-[#036670] transition-colors duration-200"
+                    href="mailto:contact@anyspacemedia.com"
+                    className="flex items-center text-gray-300 hover:text-[#FFD700] transition-colors duration-200"
                   >
                     <svg
-                      className="w-4 h-4 mr-2"
+                      className="w-4 h-4 mr-3 text-[#FFD700]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -456,7 +519,7 @@ const Form: React.FC = () => {
                         d="M9 5l7 7-7 7"
                       />
                     </svg>
-                    Email us directly
+                    Email us directly for quick questions
                   </a>
                 </div>
               </div>
@@ -466,16 +529,21 @@ const Form: React.FC = () => {
       </div>
 
       {/* Closing Message */}
-      <div className="py-16 bg-[#036670]/5">
+      <div className="relative z-8 py-16 border-t border-[#FFD700]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-[#4c4c4c] italic">
-            We look forward to connecting with you and helping you take the next
-            step.
-          </p>
+          <div className="bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/10 to-[#DAA520]/10 rounded-2xl p-8 border border-[#FFD700]/20">
+            <p className="text-lg text-gray-300 italic mb-4">
+              "Every great project begins with a conversation."
+            </p>
+            <p className="text-[#FFD700] font-semibold">
+              We look forward to capturing your vision and creating something
+              extraordinary together.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Form;
+export default ContactForm;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CTABand = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,11 +53,33 @@ const CTABand = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             {/* Primary CTA */}
-            <button className="group relative inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/30">
-              <span className="relative z-10 flex items-center">
-                Contact Us Today
+            <Link href="/contact">
+              <button className="group relative inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/30">
+                <span className="relative z-10 flex items-center">
+                  Contact Us Today
+                  <svg
+                    className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#DAA520] via-[#FFD700] to-[#B8860B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
+            </Link>
+            {/* Secondary CTA */}
+            <Link href="tel:+14352166499">
+              <button className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold text-lg rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300 hover:scale-105">
                 <svg
-                  className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                  className="mr-3 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -65,31 +88,12 @@ const CTABand = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 5l7 7-7 7"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-              </span>
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#DAA520] via-[#FFD700] to-[#B8860B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
-
-            {/* Secondary CTA */}
-            <button className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold text-lg rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300 hover:scale-105">
-              <svg
-                className="mr-3 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              Call Now
-            </button>
+                Call Now
+              </button>
+            </Link>
           </motion.div>
 
           {/* Contact Info */}
@@ -114,7 +118,7 @@ const CTABand = () => {
                     d="M3 8l7.89 7.89a2 2 0 002.83 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>hello@anyspacemedia.com</span>
+                <span>contact@anyspacemedia.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg
@@ -130,7 +134,7 @@ const CTABand = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>(555) 123-SPACE</span>
+                <span>(435) 216-6499</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg
@@ -152,7 +156,7 @@ const CTABand = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>Nationwide Coverage</span>
+                <span>Mountain & Western U.S.</span>
               </div>
             </div>
           </motion.div>

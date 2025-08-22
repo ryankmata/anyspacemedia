@@ -17,11 +17,11 @@ const Blog: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative z-0 bg-white overflow-hidden min-h-screen">
+    <div className="relative z-0 bg-gradient-to-br from-black via-neutral-950 to-black overflow-hidden min-h-screen">
       {/* Geometric Background Pattern */}
       <div className="absolute inset-0">
         {/* Hexagonal Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0 opacity-[0.08]">
           <svg
             width="100%"
             height="100%"
@@ -39,7 +39,7 @@ const Blog: React.FC = () => {
               >
                 <polygon
                   points="30,2 52,15 52,37 30,50 8,37 8,15"
-                  stroke="#036670"
+                  stroke="#FFD700"
                   strokeWidth="1"
                   fill="none"
                 />
@@ -49,17 +49,23 @@ const Blog: React.FC = () => {
           </svg>
         </div>
 
+        {/* Background Glow Effects */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-[#FFD700]/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-gradient-to-l from-[#B8860B]/10 to-transparent rounded-full blur-3xl" />
+
         {/* Floating Geometric Shapes */}
         <div
-          className="absolute top-20 left-1/6 w-16 h-16 border-2 border-[#036670]/20 rotate-45 animate-spin"
+          className="absolute top-20 left-1/6 w-16 h-16 border-2 border-[#FFD700]/30 rotate-45 animate-spin"
           style={{ animationDuration: "20s" }}
         ></div>
-        <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-[#039C9E]/10 transform rotate-12 animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-[#FFD700]/20 transform rotate-12 animate-pulse"></div>
         <div
-          className="absolute bottom-1/4 left-1/3 w-12 h-12 border border-[#036670]/15 rounded-full animate-bounce"
+          className="absolute bottom-1/4 left-1/3 w-12 h-12 border border-[#B8860B]/25 rounded-full animate-bounce"
           style={{ animationDuration: "3s" }}
         ></div>
-        <div className="absolute top-2/3 right-1/6 w-6 h-24 bg-[#036670]/5 transform -rotate-12 animate-pulse delay-1000"></div>
+        <div className="absolute top-2/3 right-1/6 w-6 h-24 bg-[#FFD700]/10 transform -rotate-12 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/12 w-4 h-4 bg-[#DAA520]/30 rounded-full animate-ping delay-2000"></div>
+        <div className="absolute bottom-1/6 right-1/2 w-20 h-20 border-2 border-[#B8860B]/20 transform rotate-45 animate-pulse delay-3000"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center pt-45 pb-25">
@@ -75,32 +81,35 @@ const Blog: React.FC = () => {
             >
               {/*maybe implement later
               <div className="inline-block mb-8">
-                <div className="flex items-center justify-center space-x-3 bg-[#036670]/5 border border-[#036670]/20 rounded-full px-6 py-3">
-                  <div className="w-2 h-2 bg-[#036670] rounded-full animate-pulse"></div>
-                  <span className="text-[#036670] font-semibold text-sm tracking-wide uppercase">
+                <div className="flex items-center justify-center space-x-3 bg-[#FFD700]/5 border border-[#FFD700]/20 rounded-full px-6 py-3">
+                  <div className="w-2 h-2 bg-[#FFD700] rounded-full animate-pulse"></div>
+                  <span className="text-[#FFD700] font-semibold text-sm tracking-wide uppercase">
                     The Strategic Finds Advantage
                   </span>
-                  <div className="w-2 h-2 bg-[#039C9E] rounded-full animate-pulse delay-500"></div>
+                  <div className="w-2 h-2 bg-[#B8860B] rounded-full animate-pulse delay-500"></div>
                 </div>
               </div>
                 */}
-              <h1 className="text-7xl md:text-8xl lg:text-9xl font-black text-[#036670] mb-8 tracking-tight">
+              <h1 className="text-7xl md:text-8xl lg:text-9xl font-black text-white mb-8 tracking-tight">
                 Coming
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#036670] via-[#039C9E] to-[#036670]">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
                   Soon!
                 </span>
               </h1>
 
               <div className="max-w-4xl mx-auto mb-12">
-                <p className="text-3xl md:text-4xl text-[#4c4c4c] font-light leading-relaxed mb-8">
-                  "It’s not just about deals. It’s about the{" "}
-                  <em className="text-[#036670] font-medium">right</em> fit."
-                  <br />- Strategic Finds
+                <p className="text-3xl md:text-4xl text-gray-300 font-light leading-relaxed mb-8">
+                  "Inspiration&nbsp;&nbsp;|&nbsp;&nbsp;Passion&nbsp;&nbsp;|&nbsp;&nbsp;Attraction{" "}
+                  {/*<em className="text-[#FFD700] font-medium">right</em> fit."*/}
+                  <br />- Any Space Media
                 </p>
                 <div className="flex justify-center">
-                  <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#036670] to-transparent"></div>
+                  <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
                 </div>
               </div>
+
+              {/* Additional glow effect behind text */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-radial from-[#FFD700]/5 via-transparent to-transparent -z-10"></div>
             </div>
           </div>
         </div>
