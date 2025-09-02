@@ -3,12 +3,12 @@ import { ChevronDown } from "lucide-react";
 
 const HomeHero = () => {
   return (
-    <section className="pt-28 md:pt-0 bg-black">
+    <section className="pt-28 md:pt-0">
       {/* Media block (image now, video later) */}
       <section className="relative w-full md:min-h-[calc(100vh)] overflow-hidden">
         {/* Media */}
         <video
-          src="/Home.mp4" // replace with your video file
+          src="/Home.mp4"
           autoPlay
           loop
           muted

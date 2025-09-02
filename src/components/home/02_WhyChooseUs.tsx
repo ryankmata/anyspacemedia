@@ -253,32 +253,34 @@ const WhyChooseUs = () => {
           <circle cx="24" cy="24" r="2" fill="currentColor" />
         </svg>
       ),
-      title: "Cultivated Reliability",
+      title: "Dependable Precision",
       description:
-        "Shooting your space requires nuance, dignity, and precision. We arrive early, adapt for light, manage drones safely and professionally, and deliver curated galleries with polished drive-time turnaround. Your vision comes alive—on time, on point, every frame.",
+        "Shooting your space requires nuance, dignity, and precision. Our team handles every detail with professionalism, ensuring your vision comes alive — on time, on point, every frame.",
     },
   ];
 
   const stats = [
-    { number: "8+", label: "Years in Business" },
-    { number: "500+", label: "Projects Completed" },
+    { number: "9+", label: "Years in Business" },
+    { number: "3000+", label: "Projects Completed" },
     { number: "50+", label: "Clients & Brands" },
     { number: "99%", label: "Client Satisfaction" },
   ];
 
   const clientLogos = [
     "Parade of Homes",
-    "Red Ledges",
+    "Huga Home",
     "Split Rock Custom Homes",
     "Utah Style & Design",
-    "Habitations Residential Design Group",
+    "Alair Homes",
   ];
 
   return (
-    <section className="py-24 z-9 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 relative overflow-hidden">
+    <section className="py-24 z-9 bg-transparent relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#B8860B]/5 to-transparent opacity-30" />
-
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
+        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />*/}
+      </div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -345,7 +347,7 @@ const WhyChooseUs = () => {
           </div>
         </motion.div>
 
-        {/* Client Logos */}
+        {/* Client Logos 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -365,7 +367,7 @@ const WhyChooseUs = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div>*/}
 
         {/* CTA Button */}
         <motion.div
@@ -374,7 +376,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
           className="text-center"
         >
-          <Link href="/#choose_your_space">
+          <Link href="/#choose-your-space">
             <button className="group inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/25 transition-all duration-300 hover:scale-105">
               Choose Your Space
               <svg

@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
   return (
     <div
       id="contact-form"
-      className="min-h-screen z-8 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 scroll-mt-22"
+      className="min-h-screen z-8 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 scroll-mt-10"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">

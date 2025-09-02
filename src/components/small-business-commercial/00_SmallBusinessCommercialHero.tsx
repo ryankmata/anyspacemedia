@@ -1,7 +1,7 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
 
-const CommercialHero = () => {
+const SmallBusinessCommercialHero = () => {
   return (
     <section className="pt-28 md:pt-0 bg-black">
       {/* Media block (image now, video later) */}
@@ -47,4 +47,4 @@ const CommercialHero = () => {
   );
 };
 
-export default CommercialHero;
+export default SmallBusinessCommercialHero;

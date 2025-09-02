@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
+import { SPACES } from "@/lib/constants";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,11 +16,11 @@ const Navbar: React.FC = () => {
   const isHome = pathname === "/";
   const [openSpace, setOpenSpace] = useState(false);
   const spacePaths = [
-    "/architecture-design",
-    "/automotive",
-    "/commercial",
-    "/real-estate",
-    "/rv-marine",
+    SPACES.ArchitectureDesign.link,
+    SPACES.Automotive.link,
+    SPACES.SmallBusinessCommercial.link,
+    SPACES.RealEstate.link,
+    SPACES.RVMarine.link,
   ];
   const isSpaceActive = spacePaths.some(
     (p) => pathname === p || pathname.startsWith(p + "/")
@@ -97,7 +98,7 @@ const Navbar: React.FC = () => {
 
                 <span className="text-white/50 font-black text-xs">|</span>
                 <Link
-                  href={isHome ? "#choose_your_space" : "/#choose_your_space"}
+                  href={isHome ? "#choose-your-space" : "/#choose-your-space"}
                   onClick={closeAll}
                   className={`${
                     pathname === "/choose_your_space"
@@ -226,34 +227,34 @@ const Navbar: React.FC = () => {
                 >
                   <div className="flex flex-col">
                     <Link
-                      href="/architecture-design"
+                      href={SPACES.ArchitectureDesign.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Architecture & Design
+                      {SPACES.ArchitectureDesign.title}
                     </Link>
                     <Link
-                      href="/automotive"
+                      href={SPACES.Automotive.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Automotive
+                      {SPACES.Automotive.title}
                     </Link>
                     <Link
-                      href="/commercial"
+                      href={SPACES.SmallBusinessCommercial.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Commercial
+                      {SPACES.SmallBusinessCommercial.title}
                     </Link>
                     <Link
-                      href="/real-estate"
+                      href={SPACES.RealEstate.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Real Estate
+                      {SPACES.RealEstate.title}
                     </Link>
                     <Link
-                      href="/rv-marine"
+                      href={SPACES.RVMarine.link}
                       className="px-6 py-2 mb-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      RV & Marine
+                      {SPACES.RVMarine.title}
                     </Link>
                   </div>
                 </div>
@@ -356,34 +357,34 @@ const Navbar: React.FC = () => {
                 >
                   <div className="flex flex-col">
                     <Link
-                      href="/architecture-design"
+                      href={SPACES.ArchitectureDesign.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Architecture & Design
+                      {SPACES.ArchitectureDesign.title}
                     </Link>
                     <Link
-                      href="/automotive"
+                      href={SPACES.Automotive.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Automotive
+                      {SPACES.Automotive.title}
                     </Link>
                     <Link
-                      href="/commercial"
+                      href={SPACES.SmallBusinessCommercial.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Commercial
+                      {SPACES.SmallBusinessCommercial.title}
                     </Link>
                     <Link
-                      href="/real-estate"
+                      href={SPACES.RealEstate.link}
                       className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      Real Estate
+                      {SPACES.RealEstate.title}
                     </Link>
                     <Link
-                      href="/rv-marine"
+                      href={SPACES.RVMarine.link}
                       className="px-6 py-2 mb-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
                     >
-                      RV & Marine
+                      {SPACES.RVMarine.title}
                     </Link>
                   </div>
                 </div>
