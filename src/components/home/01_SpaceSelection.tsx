@@ -199,7 +199,7 @@ const ShowcaseGalleries = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4 [&>*:nth-child(5)]:col-span-2 [&>*:nth-child(5)]:justify-self-center [&>*:nth-child(5)]:w-[calc(50%-0.5rem)] md:[&>*:nth-child(5)]:col-span-1 md:[&>*:nth-child(5)]:w-auto"
         >
           {galleryItems.map((item, index) => (
             <button
