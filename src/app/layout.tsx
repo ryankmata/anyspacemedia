@@ -101,7 +101,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className={`bg-white ${manrope.className} antialiased`}>
+      <body className={`bg-black ${manrope.className} antialiased`}>
         <Navbar />
         <FooterVariantProvider>
           {children}

@@ -154,26 +154,6 @@ const ShowcaseGalleries = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/10 via-transparent to-[#DAA520]/10" />
 
-            {/* Auto-cycle status indicator */}
-            <div className="absolute top-4 right-4">
-              <div
-                className={`flex items-center space-x-2 px-3 py-1 rounded-full backdrop-blur-sm transition-colors duration-300 ${
-                  isPaused
-                    ? "bg-red-500/20 border border-red-500/30"
-                    : "bg-green-500/20 border border-green-500/30"
-                }`}
-              >
-                <div
-                  className={`w-2 h-2 rounded-full ${
-                    isPaused ? "bg-red-400" : "bg-green-400 animate-pulse"
-                  }`}
-                />
-                <span className="text-white text-xs font-medium">
-                  {isPaused ? "Paused" : "Auto"}
-                </span>
-              </div>
-            </div>
-
             {/* Image Info Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
               <motion.div
@@ -244,33 +224,6 @@ const ShowcaseGalleries = () => {
                   {item.category}
                 </span>
               </div>
-
-              {/* Active indicator with progress ring */}
-              {activeImage === index && (
-                <div className="absolute top-2 right-2">
-                  <div className="relative">
-                    <div className="w-4 h-4 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full" />
-                    {!isPaused && (
-                      <div className="absolute inset-0 rounded-full border-2 border-[#FFD700]/30">
-                        <div
-                          className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#FFD700] animate-spin"
-                          style={{
-                            animationDuration: "3s",
-                            animationTimingFunction: "linear",
-                          }}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              {/* Pause indicator */}
-              {activeImage === index && isPaused && (
-                <div className="absolute top-2 left-2">
-                  <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" />
-                </div>
-              )}
             </button>
           ))}
         </motion.div>

@@ -61,10 +61,10 @@ const ArchitectureCTA = () => {
             className="mb-12"
           >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Transform Your </span>
+              <span className="text-white">Redefine Your </span>
               <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
-                Architecture Today
+                Space Today
               </span>
             </h2>
 
@@ -240,7 +240,7 @@ const ArchitectureCTA = () => {
               </div>
             </div>
 
-            {/* Final Trust Signal */}
+            {/* Final Trust Signal 
             <div className="bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/10 to-[#DAA520]/10 rounded-2xl p-6 border border-[#FFD700]/20">
               <p className="text-gray-300 text-center">
                 <span className="text-[#FFD700] font-semibold">
@@ -251,7 +251,7 @@ const ArchitectureCTA = () => {
                   Licensed & insured nationwide
                 </span>
               </p>
-            </div>
+            </div>*/}
           </motion.div>
         </div>
       </div>

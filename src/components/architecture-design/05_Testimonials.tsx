@@ -96,7 +96,7 @@ const TestimonialsSection = () => {
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />
+        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />*/}
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -107,13 +107,8 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#B8860B]/20 to-[#FFD700]/20 rounded-full border border-[#FFD700]/30 mb-6">
-            <span className="text-[#FFD700] font-semibold text-sm tracking-wider">
-              CLIENT SUCCESS STORIES
-            </span>
-          </div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="text-white">What Architects </span>
+            <span className="text-white">What Our Clients </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
               Are Saying
             </span>
@@ -249,7 +244,7 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Stats Row */}
+        {/* Stats Row 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -284,7 +279,7 @@ const TestimonialsSection = () => {
           </div>
         </motion.div>
 
-        {/* Call to Action */}
+        {/* Call to Action 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -316,7 +311,7 @@ const TestimonialsSection = () => {
               </svg>
             </button>
           </Link>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </section>
   );

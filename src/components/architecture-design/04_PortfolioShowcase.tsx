@@ -302,11 +302,11 @@ const PortfolioShowcase: React.FC = () => {
   };
 
   return (
-    <section className="py-32 z-8 bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden">
+    <section className="pb-32 pt-20 z-8 bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />
+        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />*/}
       </div>
       {/* Background Elements */}
       <div className="absolute inset-0">

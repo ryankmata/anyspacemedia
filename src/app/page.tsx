@@ -15,7 +15,9 @@ export default function Home() {
   }, [setVariant]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-900 via-black to-neutral-900 overflow-x-hidden">
+    <div
+      className={`min-h-screen bg-gradient-to-br from-neutral-900 via-black to-neutral-900 overflow-x-hidden`}
+    >
       <HomeHero />
       <SpaceSelection />
       <WhyChooseUs />

@@ -10,21 +10,8 @@ const CTABand = () => {
   }, []);
 
   return (
-    <section className="relative z-9 py-20 bg-black overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/20 to-[#DAA520]/10 animate-pulse" />
-        <div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-[#FFD700]/10 to-transparent rounded-full blur-3xl animate-bounce"
-          style={{ animationDuration: "6s" }}
-        />
-        <div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-[#B8860B]/10 to-transparent rounded-full blur-3xl animate-bounce"
-          style={{ animationDuration: "8s", animationDelay: "2s" }}
-        />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="relative py-20 z-9 bg-black overflow-hidden bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/20 to-[#DAA520]/10">
+      <div className="container mx-auto px-4 relative ">
         <div className="text-center">
           {/* Main CTA Text */}
           <motion.div
@@ -101,7 +88,7 @@ const CTABand = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="mt-8 pt-8 border-t border-white/10"
+            className="mt-20 pt-8 border-t border-white/10"
           >
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-gray-400">
               <div className="flex items-center gap-2">
@@ -118,7 +105,9 @@ const CTABand = () => {
                     d="M3 8l7.89 7.89a2 2 0 002.83 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>contact@anyspacemedia.com</span>
+                <Link href="mailto:contact@anyspacemedia.com">
+                  contact@anyspacemedia.com
+                </Link>
               </div>
               <div className="flex items-center gap-2">
                 <svg
@@ -134,7 +123,7 @@ const CTABand = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>(435) 216-6499</span>
+                <Link href="tel:14352166499">(435) 216-6499</Link>
               </div>
               <div className="flex items-center gap-2">
                 <svg
@@ -159,19 +148,6 @@ const CTABand = () => {
                 <span>Mountain & Western U.S.</span>
               </div>
             </div>
-          </motion.div>
-
-          {/* Urgency/Social Proof */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="mt-6"
-          >
-            <p className="text-sm text-gray-500">
-              Join 500+ satisfied clients • Same-day response guarantee • Book
-              your consultation within 24 hours
-            </p>
           </motion.div>
         </div>
       </div>
