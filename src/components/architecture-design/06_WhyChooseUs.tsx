@@ -11,7 +11,7 @@ import {
   Award,
   Clock,
   Shield,
-  Plane,
+  Drone,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -39,7 +39,7 @@ const WhyChooseUs: React.FC = () => {
       stats: "48hr Rush Available",
     },
     {
-      icon: <Plane className="w-8 h-8" />,
+      icon: <Drone className="w-8 h-8" />,
       title: "Advanced Technology",
       description:
         "State-of-the-art drone capabilities, professional lighting equipment, and cutting-edge post-production ensure exceptional results every time.",
@@ -82,7 +82,7 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-black via-neutral-950 to-neutral-900 relative overflow-hidden">
+    <section className="z-9 py-24 bg-gradient-to-b from-black via-neutral-950 to-neutral-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />

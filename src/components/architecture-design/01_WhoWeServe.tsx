@@ -23,7 +23,7 @@ const WhoWeServe = () => {
 
   const clientTypes = [
     {
-      icon: <Building2 className="w-8 h-8" />,
+      icon: <Home className="w-8 h-8" />,
       title: "Home Builders",
       description:
         "Showcase your craftsmanship with stunning photography that sells homes before they're even finished. Professional imagery that elevates your marketing materials and attracts quality buyers.",
@@ -47,7 +47,7 @@ const WhoWeServe = () => {
       ],
     },
     {
-      icon: <Home className="w-8 h-8" />,
+      icon: <Building2 className="w-8 h-8" />,
       title: "Architects",
       description:
         "Bring your architectural concepts to life through professional photography that communicates your design philosophy and attracts new clients seeking innovative solutions.",

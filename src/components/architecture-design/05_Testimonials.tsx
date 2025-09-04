@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-32 z-9 bg-black relative overflow-hidden">
+    <section className="pt-32 pb-12 z-9 bg-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />

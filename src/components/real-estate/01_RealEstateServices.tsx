@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import {
+  Camera,
+  House,
+  Video,
+  Drone,
+  Rotate3d,
+  ChevronRight,
+} from "lucide-react";
+import Link from "next/link";
 
 const RealEstateServices = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +20,7 @@ const RealEstateServices = () => {
 
   const services = [
     {
-      icon: "📸",
+      icon: <Camera />,
       title: "Professional Photography",
       description:
         "High-resolution interior and exterior photography that showcases every detail of your property with luxury-grade equipment and expert lighting.",
@@ -26,7 +35,7 @@ const RealEstateServices = () => {
       image: "/real-estate_CYS.jpg",
     },
     {
-      icon: "🎬",
+      icon: <Video />,
       title: "Cinematic Video Tours",
       description:
         "Immersive video walkthroughs that tell your property's story, combining smooth cinematography with compelling narrative flow.",
@@ -41,7 +50,7 @@ const RealEstateServices = () => {
       image: "/real-estate_CYS.jpg",
     },
     {
-      icon: "🚁",
+      icon: <Drone />,
       title: "Drone Cinematography",
       description:
         "Spectacular aerial perspectives that showcase your property's location, surroundings, and unique features from breathtaking angles.",
@@ -56,7 +65,7 @@ const RealEstateServices = () => {
       image: "/real-estate_CYS.jpg",
     },
     {
-      icon: "🏠",
+      icon: <House />,
       title: "Virtual Staging",
       description:
         "Transform empty spaces into beautifully furnished homes with photorealistic virtual staging that helps buyers envision living there.",
@@ -71,7 +80,7 @@ const RealEstateServices = () => {
       image: "/real-estate_CYS.jpg",
     },
     {
-      icon: "🌐",
+      icon: <Rotate3d />,
       title: "360° Virtual Tours",
       description:
         "Interactive virtual reality experiences that allow potential buyers to explore properties remotely with immersive detail.",
@@ -85,25 +94,10 @@ const RealEstateServices = () => {
       ],
       image: "/real-estate_CYS.jpg",
     },
-    {
-      icon: "⚡",
-      title: "Rapid Delivery",
-      description:
-        "Lightning-fast turnaround times to keep your listings competitive with expedited processing and priority handling.",
-      features: [
-        "24-Hour Standard Delivery",
-        "Same-Day Rush Available",
-        "Cloud-Based Gallery Access",
-        "Multiple Format Options",
-        "Direct MLS Upload",
-        "Mobile-Optimized Delivery",
-      ],
-      image: "/real-estate_CYS.jpg",
-    },
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-black via-neutral-900 to-black relative overflow-hidden">
+    <section className="py-24 z-9 bg-gradient-to-br from-black via-neutral-900 to-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#8E6B0F]/5 to-transparent opacity-40" />
 
@@ -132,19 +126,20 @@ const RealEstateServices = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="flex flex-wrap justify-center gap-4 mb-16"
+          className="flex items-center justify-center gap-4 mb-16"
         >
           {services.map((service, index) => (
             <button
               key={index}
               onClick={() => setActiveService(index)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`inline-flex items-center gap-2 px-4 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeService === index
                   ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black"
                   : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
-              {service.icon} {service.title}
+              {service.icon}
+              <span>{service.title}</span>
             </button>
           ))}
         </motion.div>
@@ -159,12 +154,9 @@ const RealEstateServices = () => {
         >
           {/* Service Info */}
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="text-4xl">{services[activeService].icon}</div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white">
-                {services[activeService].title}
-              </h3>
-            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              {services[activeService].title}
+            </h3>
 
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               {services[activeService].description}
@@ -177,6 +169,22 @@ const RealEstateServices = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
+            </div>
+            <div className="flex gap-4 pt-6">
+              <Link
+                href="#services"
+                className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/30 transition-all duration-300 hover:scale-105"
+              >
+                Explore Pricing
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="#portfolio"
+                className="inline-flex items-center px-6 py-2 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300"
+              >
+                See More
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Link>
             </div>
           </div>
 
@@ -191,97 +199,6 @@ const RealEstateServices = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#8E6B0F]/10 via-transparent to-[#C89B2C]/10" />
             </div>
-          </div>
-        </motion.div>
-
-        {/* All Services Grid Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Complete Service Overview
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                  ease: "easeOut",
-                }}
-                className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300 group hover:transform hover:scale-105"
-              >
-                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-[#EDC577] transition-colors duration-300">
-                  {service.title}
-                </h4>
-                <p className="text-gray-400 text-sm mb-4">
-                  {service.description.slice(0, 120)}...
-                </p>
-                <div className="text-sm text-[#EDC577]">
-                  {service.features.length} key features included
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Process Steps */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="text-center"
-        >
-          <h3 className="text-3xl font-bold text-white mb-12">
-            Our Streamlined Process
-          </h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Book & Plan",
-                desc: "Schedule shoot and discuss requirements",
-              },
-              {
-                step: "2",
-                title: "Capture",
-                desc: "Professional on-site photography and filming",
-              },
-              {
-                step: "3",
-                title: "Edit & Enhance",
-                desc: "Professional post-production and staging",
-              },
-              {
-                step: "4",
-                title: "Deliver",
-                desc: "Fast delivery via secure cloud gallery",
-              },
-            ].map((item, index) => (
-              <div key={index} className="relative">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] rounded-full flex items-center justify-center text-black font-bold text-xl mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h4 className="text-xl font-bold text-white mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-gray-400">{item.desc}</p>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[#EDC577] to-transparent transform -translate-y-1/2" />
-                )}
-              </div>
-            ))}
           </div>
         </motion.div>
       </div>

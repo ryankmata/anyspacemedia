@@ -22,7 +22,7 @@ const CTABand = () => {
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               <span className="text-white">Ready to capture</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] animate-pulse">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
                 your space?
               </span>
             </h2>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const ArchitectureCTA = () => {
+const RealEstateCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const ArchitectureCTA = () => {
   ];
 
   return (
-    <section className="relative pt-20 pb-32 z-8 bg-gradient-to-br from-black via-neutral-900 to-black overflow-hidden">
+    <section className="relative py-32 z-8 bg-gradient-to-br from-black via-neutral-900 to-black overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0">
@@ -62,8 +62,7 @@ const ArchitectureCTA = () => {
             className="mb-12"
           >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Redefine Your </span>
-
+              <span className="text-white">Capture Your </span>
               <br className="hidden md:block" />
               <span className="text-white">Space </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
@@ -72,9 +71,9 @@ const ArchitectureCTA = () => {
             </h2>
 
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Don't let your architectural masterpieces go unnoticed.
-              Professional media that wins awards, attracts clients, and
-              elevates your portfolio starts with one conversation.
+              Don't let a home go unnoticed. Professional media that wins
+              awards, attracts clients, and elevates your portfolio starts with
+              one conversation.
             </p>
           </motion.div>
 
@@ -265,4 +264,4 @@ const ArchitectureCTA = () => {
   );
 };
 
-export default ArchitectureCTA;
+export default RealEstateCTA;
