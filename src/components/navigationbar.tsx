@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="bg-white p-0.25 rounded-sm hover:bg-[#FFD700] transition tracking-wide hover:scale-105"
+                  className="bg-white p-0.25 rounded-sm hover:bg-[#EDC577] transition tracking-wide hover:scale-105"
                 >
                   <FaFacebookF size={14} />
                 </a>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="bg-white p-0.25 rounded-sm hover:bg-[#FFD700] transition tracking-wide hover:scale-105"
+                  className="bg-white p-0.25 rounded-sm hover:bg-[#EDC577] transition tracking-wide hover:scale-105"
                 >
                   <FaInstagram size={14} />
                 </a>
@@ -90,8 +90,8 @@ const Navbar: React.FC = () => {
                   href="/"
                   onClick={closeAll}
                   className={`${
-                    pathname === "/" ? "text-[#FFD700]" : "text-white/90"
-                  } font-black text-xs hover:text-[#FFD700] transition tracking-wide hover:scale-105`}
+                    pathname === "/" ? "text-[#EDC577]" : "text-white/90"
+                  } font-black text-xs hover:text-[#EDC577] transition tracking-wide hover:scale-105`}
                 >
                   HOME
                 </Link>
@@ -102,9 +102,9 @@ const Navbar: React.FC = () => {
                   onClick={closeAll}
                   className={`${
                     pathname === "/choose_your_space"
-                      ? "text-[#FFD700]"
+                      ? "text-[#EDC577]"
                       : "text-white/90"
-                  } font-black text-xs hover:text-[#FFD700] transition tracking-wide hover:scale-105`}
+                  } font-black text-xs hover:text-[#EDC577] transition tracking-wide hover:scale-105`}
                 >
                   CHOOSE YOUR SPACE
                 </Link>
@@ -113,8 +113,8 @@ const Navbar: React.FC = () => {
                   href={isHome ? "about" : "/about"}
                   onClick={closeAll}
                   className={`${
-                    pathname === "/about" ? "text-[#FFD700]" : "text-white/90"
-                  } font-black text-xs hover:text-[#FFD700] transition tracking-wide hover:scale-105`}
+                    pathname === "/about" ? "text-[#EDC577]" : "text-white/90"
+                  } font-black text-xs hover:text-[#EDC577] transition tracking-wide hover:scale-105`}
                 >
                   ABOUT
                 </Link>
@@ -123,8 +123,8 @@ const Navbar: React.FC = () => {
                   href={isHome ? "contact" : "/contact"}
                   onClick={closeAll}
                   className={`${
-                    pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
-                  } font-black text-xs hover:text-[#FFD700] transition tracking-wide hover:scale-105`}
+                    pathname === "/contact" ? "text-[#EDC577]" : "text-white/90"
+                  } font-black text-xs hover:text-[#EDC577] transition tracking-wide hover:scale-105`}
                 >
                   CONTACT US
                 </Link>
@@ -136,7 +136,7 @@ const Navbar: React.FC = () => {
             {/* Desktop hamburger toggles a RIGHT slide-in panel */}
             <button
               onClick={() => setIsDesktopMenuOpen((v) => !v)}
-              className="inline-flex items-center justify-center py-1 px-4 ml-4 mr-12 rounded-md text-white hover:text-[#FFD700] hover:bg-[#FFD700]/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FFD700] transition-colors"
+              className="inline-flex items-center justify-center py-1 px-4 ml-4 mr-12 rounded-md text-white hover:text-[#EDC577] hover:bg-[#EDC577]/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#EDC577] transition-colors"
               aria-expanded={isDesktopMenuOpen}
               aria-controls="desktop-menu-panel"
               aria-label="Open desktop menu"
@@ -172,7 +172,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setIsDesktopMenuOpen(false)}
               aria-label="Close menu"
-              className="absolute top-3 right-3 p-2 rounded-md text-white hover:text-[#FFD700] hover:bg-[#FFD700]/10 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
+              className="absolute top-3 right-3 p-2 rounded-md text-white hover:text-[#EDC577] hover:bg-[#EDC577]/10 focus:outline-none focus:ring-2 focus:ring-[#EDC577]"
             >
               {/* X icon */}
               <svg
@@ -195,8 +195,8 @@ const Navbar: React.FC = () => {
               <Link
                 href="/"
                 className={`block px-3 py-3 ${
-                  pathname === "/" ? "text-[#FFD700]" : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+                  pathname === "/" ? "text-[#EDC577]" : "text-white/90"
+                } hover:text-[#EDC577] hover:bg-[#EDC577]/5 font-bold tracking-wider border-b border-[#EDC577]/10`}
               >
                 HOME
               </Link>
@@ -206,18 +206,17 @@ const Navbar: React.FC = () => {
                 onMouseLeave={() => setOpenSpace(false)}
               >
                 {/* Trigger (click for mobile, hover for desktop) */}
-                <div className="flex flex-row items-center">
-                  <button
-                    onClick={() => setOpenSpace((v) => !v)}
-                    className={`w-full text-left px-3 py-3 font-bold tracking-wider border-b border-[#FFD700]/10
+
+                <button
+                  onClick={() => setOpenSpace((v) => !v)}
+                  className={`flex w-full items-center px-3 py-3 font-bold tracking-wider border-b border-[#EDC577]/10 
                       ${
-                        isSpaceActive ? "text-[#FFD700]" : "text-white/90"
-                      } hover:text-[#FFD700] hover:bg-[#FFD700]/5`}
-                  >
-                    CHOOSE YOUR SPACE
-                  </button>
-                  <span className="px-4">+</span>
-                </div>
+                        isSpaceActive ? "text-[#EDC577]" : "text-white/90"
+                      } hover:text-[#EDC577] hover:bg-[#EDC577]/5`}
+                >
+                  <span className="flex-1 text-left">CHOOSE YOUR SPACE</span>
+                  <span className="text-right">+</span>
+                </button>
 
                 {/* Submenu */}
                 <div
@@ -228,31 +227,31 @@ const Navbar: React.FC = () => {
                   <div className="flex flex-col">
                     <Link
                       href={SPACES.ArchitectureDesign.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.ArchitectureDesign.title}
                     </Link>
                     <Link
                       href={SPACES.Automotive.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.Automotive.title}
                     </Link>
                     <Link
                       href={SPACES.SmallBusinessCommercial.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.SmallBusinessCommercial.title}
                     </Link>
                     <Link
                       href={SPACES.RealEstate.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.RealEstate.title}
                     </Link>
                     <Link
                       href={SPACES.RVMarine.link}
-                      className="px-6 py-2 mb-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 mb-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.RVMarine.title}
                     </Link>
@@ -263,8 +262,8 @@ const Navbar: React.FC = () => {
               <Link
                 href={isHome ? "about" : "/about"}
                 className={`block px-3 py-3 ${
-                  pathname === "/about" ? "text-[#FFD700]" : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+                  pathname === "/about" ? "text-[#EDC577]" : "text-white/90"
+                } hover:text-[#EDC577] hover:bg-[#EDC577]/5 font-bold tracking-wider border-b border-[#EDC577]/10`}
               >
                 ABOUT
               </Link>
@@ -272,8 +271,8 @@ const Navbar: React.FC = () => {
               <Link
                 href={isHome ? "contact" : "/contact"}
                 className={`block px-3 py-3 ${
-                  pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+                  pathname === "/contact" ? "text-[#EDC577]" : "text-white/90"
+                } hover:text-[#EDC577] hover:bg-[#EDC577]/5 font-bold tracking-wider border-b border-[#EDC577]/10`}
               >
                 CONTACT US
               </Link>
@@ -295,7 +294,7 @@ const Navbar: React.FC = () => {
           {/* Hamburger (visible on mobile) */}
           <button
             onClick={() => setIsMobileMenuOpen((v) => !v)}
-            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#FFD700] hover:bg-[#FFD700]/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#FFD700]"
+            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-[#EDC577] hover:bg-[#EDC577]/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#EDC577]"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu-panel"
             aria-label="Open mobile menu"
@@ -334,8 +333,8 @@ const Navbar: React.FC = () => {
               <Link
                 href="/"
                 className={`block px-3 py-3 ${
-                  pathname === "/" ? "text-[#FFD700]" : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+                  pathname === "/" ? "text-[#EDC577]" : "text-white/90"
+                } hover:text-[#EDC577] hover:bg-[#EDC577]/5 font-bold tracking-wider border-b border-[#EDC577]/10`}
               >
                 HOME
               </Link>
@@ -344,11 +343,12 @@ const Navbar: React.FC = () => {
               <div className="relative">
                 <button
                   onClick={() => setOpenSpace((v) => !v)}
-                  className={`w-full text-left px-3 py-3 font-bold tracking-wider border-b border-[#FFD700]/10 ${
-                    isSpaceActive ? "text-[#FFD700]" : "text-white/90"
-                  } hover:text-[#FFD700] hover:bg-[#FFD700]/5`}
+                  className={`flex w-full text-left px-3 py-3 font-bold tracking-wider border-b border-[#EDC577]/10 ${
+                    isSpaceActive ? "text-[#EDC577]" : "text-white/90"
+                  } hover:text-[#EDC577] hover:bg-[#EDC577]/5`}
                 >
-                  CHOOSE YOUR SPACE
+                  <span className="flex-1 text-left">CHOOSE YOUR SPACE</span>
+                  <span>+</span>
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
@@ -358,31 +358,31 @@ const Navbar: React.FC = () => {
                   <div className="flex flex-col">
                     <Link
                       href={SPACES.ArchitectureDesign.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.ArchitectureDesign.title}
                     </Link>
                     <Link
                       href={SPACES.Automotive.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.Automotive.title}
                     </Link>
                     <Link
                       href={SPACES.SmallBusinessCommercial.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.SmallBusinessCommercial.title}
                     </Link>
                     <Link
                       href={SPACES.RealEstate.link}
-                      className="px-6 py-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.RealEstate.title}
                     </Link>
                     <Link
                       href={SPACES.RVMarine.link}
-                      className="px-6 py-2 mb-2 text-white hover:text-[#FFD700] hover:bg-[#FFD700]/5"
+                      className="px-6 py-2 mb-2 text-white hover:text-[#EDC577] hover:bg-[#EDC577]/5"
                     >
                       {SPACES.RVMarine.title}
                     </Link>
@@ -393,8 +393,8 @@ const Navbar: React.FC = () => {
               <Link
                 href={isHome ? "about" : "/about"}
                 className={`block px-3 py-3 ${
-                  pathname === "/about" ? "text-[#FFD700]" : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+                  pathname === "/about" ? "text-[#EDC577]" : "text-white/90"
+                } hover:text-[#EDC577] hover:bg-[#EDC577]/5 font-bold tracking-wider border-b border-[#EDC577]/10`}
               >
                 ABOUT
               </Link>
@@ -402,8 +402,8 @@ const Navbar: React.FC = () => {
               <Link
                 href={isHome ? "contact" : "/contact"}
                 className={`block px-3 py-3 ${
-                  pathname === "/contact" ? "text-[#FFD700]" : "text-white/90"
-                } hover:text-[#FFD700] hover:bg-[#FFD700]/5 font-bold tracking-wider border-b border-[#FFD700]/10`}
+                  pathname === "/contact" ? "text-[#EDC577]" : "text-white/90"
+                } hover:text-[#EDC577] hover:bg-[#EDC577]/5 font-bold tracking-wider border-b border-[#EDC577]/10`}
               >
                 CONTACT US
               </Link>

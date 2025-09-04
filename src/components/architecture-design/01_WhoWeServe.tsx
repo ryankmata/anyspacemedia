@@ -98,7 +98,7 @@ const WhoWeServe = () => {
   return (
     <section className="pt-24 pb-10 z-9 bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -111,7 +111,7 @@ const WhoWeServe = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Who We </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Partner With
             </span>
           </h2>
@@ -122,7 +122,7 @@ const WhoWeServe = () => {
         </motion.div>
 
         {/* Client Types Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {clientTypes.map((client, index) => (
             <motion.div
               key={index}
@@ -133,10 +133,10 @@ const WhoWeServe = () => {
                 delay: index * 0.15,
                 ease: "easeOut",
               }}
-              className="group relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-2xl border border-white/10 p-8 hover:border-[#FFD700]/30 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
+              className="group relative pb-20 bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-2xl border border-white/10 p-8 hover:border-[#EDC577]/30 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
             >
               {/* Icon */}
-              <div className="text-[#FFD700] mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-[#EDC577] mb-6 group-hover:scale-110 transition-transform duration-300">
                 {client.icon}
               </div>
 
@@ -146,7 +146,7 @@ const WhoWeServe = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="hidden md:block text-gray-300 mb-6 leading-relaxed">
                 {client.description}
               </p>
 
@@ -157,35 +157,17 @@ const WhoWeServe = () => {
                     key={idx}
                     className="flex items-center text-sm text-gray-400"
                   >
-                    <div className="w-1.5 h-1.5 bg-[#FFD700] rounded-full mr-3" />
+                    <div className="w-1.5 h-1.5 bg-[#EDC577] rounded-full mr-3" />
                     {benefit}
                   </div>
                 ))}
               </div>
 
-              {/* Hover Button - Flying in from right */}
-              <Link href="#services" passHref>
-                <motion.button
-                  initial={{ x: 100, opacity: 0 }}
-                  whileHover={{ x: 0, opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 25,
-                    duration: 0.3,
-                  }}
-                  className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-[#FFD700]/40 transition-all duration-200 hover:scale-105"
-                >
-                  Explore Services
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </motion.button>
-              </Link>
-
               {/* Alternative approach using CSS transforms for the button */}
-              <div className="absolute bottom-6 right-6 transform translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+              <div className="absolute bottom-6 right-6 md:transform md:translate-x-full md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100 md:transition-all md:duration-300 md:ease-out">
                 <Link
                   href="#services"
-                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-[#FFD700]/40 transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-[#EDC577]/40 transition-all duration-200 hover:scale-105"
                 >
                   Explore Services
                   <ArrowRight className="ml-2 w-4 h-4" />

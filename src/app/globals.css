@@ -183,7 +183,7 @@ html {
 }
 
 .showcase-swiper .swiper-pagination-bullet-active {
-  background: linear-gradient(135deg, #FFD700, #DAA520);
+  background: linear-gradient(135deg, #EDC577, #C89B2C);
   transform: scale(1.4);
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }

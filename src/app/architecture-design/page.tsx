@@ -22,8 +22,8 @@ const ArchitectureDesignPage: React.FC = () => {
       <WhoWeServe />
       <PortfolioShowcase />
       <WhyChooseUs />
-      <TestimonialsSection />
       <ServicesOverview />
+      <TestimonialsSection />
       <ArchitectureCTA />
     </div>
   );

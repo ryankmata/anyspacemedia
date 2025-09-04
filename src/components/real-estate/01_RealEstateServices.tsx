@@ -105,7 +105,7 @@ const RealEstateServices = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-black via-neutral-900 to-black relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#B8860B]/5 to-transparent opacity-40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#8E6B0F]/5 to-transparent opacity-40" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -117,7 +117,7 @@ const RealEstateServices = () => {
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
             Real Estate{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Services
             </span>
           </h2>
@@ -140,7 +140,7 @@ const RealEstateServices = () => {
               onClick={() => setActiveService(index)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeService === index
-                  ? "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black"
+                  ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black"
                   : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
@@ -173,7 +173,7 @@ const RealEstateServices = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               {services[activeService].features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full" />
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#EDC577] to-[#C89B2C] rounded-full" />
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
@@ -189,7 +189,7 @@ const RealEstateServices = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/10 via-transparent to-[#DAA520]/10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#8E6B0F]/10 via-transparent to-[#C89B2C]/10" />
             </div>
           </div>
         </motion.div>
@@ -217,18 +217,18 @@ const RealEstateServices = () => {
                   delay: index * 0.1,
                   ease: "easeOut",
                 }}
-                className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300 group hover:transform hover:scale-105"
+                className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300 group hover:transform hover:scale-105"
               >
                 <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-[#FFD700] transition-colors duration-300">
+                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-[#EDC577] transition-colors duration-300">
                   {service.title}
                 </h4>
                 <p className="text-gray-400 text-sm mb-4">
                   {service.description.slice(0, 120)}...
                 </p>
-                <div className="text-sm text-[#FFD700]">
+                <div className="text-sm text-[#EDC577]">
                   {service.features.length} key features included
                 </div>
               </motion.div>
@@ -270,7 +270,7 @@ const RealEstateServices = () => {
               },
             ].map((item, index) => (
               <div key={index} className="relative">
-                <div className="w-16 h-16 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] rounded-full flex items-center justify-center text-black font-bold text-xl mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] rounded-full flex items-center justify-center text-black font-bold text-xl mx-auto mb-4">
                   {item.step}
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">
@@ -278,7 +278,7 @@ const RealEstateServices = () => {
                 </h4>
                 <p className="text-gray-400">{item.desc}</p>
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[#FFD700] to-transparent transform -translate-y-1/2" />
+                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[#EDC577] to-transparent transform -translate-y-1/2" />
                 )}
               </div>
             ))}

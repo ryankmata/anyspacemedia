@@ -10,7 +10,7 @@ const CTABand = () => {
   }, []);
 
   return (
-    <section className="relative py-20 z-9 bg-black overflow-hidden bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/20 to-[#DAA520]/10">
+    <section className="relative py-20 z-9 bg-black overflow-hidden bg-gradient-to-r from-[#8E6B0F]/10 via-[#EDC577]/20 to-[#C89B2C]/10">
       <div className="container mx-auto px-4 relative ">
         <div className="text-center">
           {/* Main CTA Text */}
@@ -22,7 +22,7 @@ const CTABand = () => {
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               <span className="text-white">Ready to capture</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] animate-pulse">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] animate-pulse">
                 your space?
               </span>
             </h2>
@@ -41,7 +41,7 @@ const CTABand = () => {
           >
             {/* Primary CTA */}
             <Link href="/contact">
-              <button className="group relative inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/30">
+              <button className="group relative inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/30">
                 <span className="relative z-10 flex items-center">
                   Contact Us Today
                   <svg
@@ -59,12 +59,12 @@ const CTABand = () => {
                   </svg>
                 </span>
                 {/* Hover Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#DAA520] via-[#FFD700] to-[#B8860B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C89B2C] via-[#EDC577] to-[#8E6B0F] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </Link>
             {/* Secondary CTA */}
             <Link href="tel:+14352166499">
-              <button className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold text-lg rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300 hover:scale-105">
+              <button className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold text-lg rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300 hover:scale-105">
                 <svg
                   className="mr-3 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
@@ -93,7 +93,7 @@ const CTABand = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-gray-400">
               <div className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#FFD700]"
+                  className="w-5 h-5 text-[#EDC577]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -111,7 +111,7 @@ const CTABand = () => {
               </div>
               <div className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#FFD700]"
+                  className="w-5 h-5 text-[#EDC577]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ const CTABand = () => {
               </div>
               <div className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-[#FFD700]"
+                  className="w-5 h-5 text-[#EDC577]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -153,8 +153,8 @@ const CTABand = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-1 h-20 bg-gradient-to-b from-[#FFD700] to-[#B8860B] rounded-r-full" />
-      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 w-1 h-20 bg-gradient-to-b from-[#B8860B] to-[#FFD700] rounded-l-full" />
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-1 h-20 bg-gradient-to-b from-[#EDC577] to-[#8E6B0F] rounded-r-full" />
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 w-1 h-20 bg-gradient-to-b from-[#8E6B0F] to-[#EDC577] rounded-l-full" />
     </section>
   );
 };

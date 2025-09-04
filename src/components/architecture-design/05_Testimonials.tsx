@@ -95,8 +95,8 @@ const TestimonialsSection = () => {
     <section className="py-32 z-9 bg-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />*/}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8E6B0F]/50 to-transparent" />*/}
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-white">What Our Clients </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Are Saying
             </span>
           </h2>
@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
                       (_, i) => (
                         <svg
                           key={i}
-                          className="w-6 h-6 text-[#FFD700] mr-1"
+                          className="w-6 h-6 text-[#EDC577] mr-1"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -159,7 +159,7 @@ const TestimonialsSection = () => {
                     <h4 className="text-white font-bold text-lg mb-1">
                       {testimonials[activeTestimonial].name}
                     </h4>
-                    <p className="text-[#FFD700] font-semibold mb-1">
+                    <p className="text-[#EDC577] font-semibold mb-1">
                       {testimonials[activeTestimonial].role}
                     </p>
                     <p className="text-gray-400 text-sm">
@@ -170,7 +170,7 @@ const TestimonialsSection = () => {
 
                   {/* Project Tag */}
                   <div className="inline-flex items-center">
-                    <span className="px-4 py-2 bg-gradient-to-r from-[#FFD700]/20 to-[#B8860B]/20 backdrop-blur-sm rounded-full text-[#FFD700] text-sm font-semibold border border-[#FFD700]/30">
+                    <span className="px-4 py-2 bg-gradient-to-r from-[#EDC577]/20 to-[#8E6B0F]/20 backdrop-blur-sm rounded-full text-[#EDC577] text-sm font-semibold border border-[#EDC577]/30">
                       Project: {testimonials[activeTestimonial].project}
                     </span>
                   </div>
@@ -237,7 +237,7 @@ const TestimonialsSection = () => {
               onClick={() => setActiveTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === activeTestimonial
-                  ? "bg-gradient-to-r from-[#FFD700] to-[#DAA520] scale-125"
+                  ? "bg-gradient-to-r from-[#EDC577] to-[#C89B2C] scale-125"
                   : "bg-white/30 hover:bg-white/50"
               }`}
             />
@@ -252,7 +252,7 @@ const TestimonialsSection = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-t border-b border-white/10"
         >
           <div className="text-center">
-            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#DAA520] mb-2">
+            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#EDC577] to-[#C89B2C] mb-2">
               99%
             </div>
             <div className="text-gray-400 text-sm">
@@ -260,19 +260,19 @@ const TestimonialsSection = () => {
             </div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#DAA520] mb-2">
+            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#EDC577] to-[#C89B2C] mb-2">
               150+
             </div>
             <div className="text-gray-400 text-sm">Architectural Projects</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#DAA520] mb-2">
+            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#EDC577] to-[#C89B2C] mb-2">
               25+
             </div>
             <div className="text-gray-400 text-sm">Award-Winning Images</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#DAA520] mb-2">
+            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#EDC577] to-[#C89B2C] mb-2">
               92%
             </div>
             <div className="text-gray-400 text-sm">Repeat Clients</div>
@@ -294,7 +294,7 @@ const TestimonialsSection = () => {
             design excellence but helps you win awards and new clients.
           </p>
           <Link href="https://listings.anyspacemedia.com/order">
-            <button className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/30 transition-all duration-300 hover:scale-105">
+            <button className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/30 transition-all duration-300 hover:scale-105">
               Start Your Project
               <svg
                 className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"

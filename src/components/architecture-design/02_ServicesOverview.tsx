@@ -210,9 +210,9 @@ const ServicesOverview: React.FC = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-l from-[#FFD700]/8 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+
+        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-l from-[#EDC577]/8 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -225,7 +225,7 @@ const ServicesOverview: React.FC = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Complete </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Visual Solutions
             </span>
           </h2>
@@ -254,8 +254,8 @@ const ServicesOverview: React.FC = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`flex items-center px-6 py-3 rounded-2xl font-semibold transition-all duration-300 mx-6 my-3 bg-white/10 ${
                   activeCategory === category
-                    ? "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black"
-                    : "text-white hover:bg-[#FFD700]/30"
+                    ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black"
+                    : "text-white hover:bg-[#EDC577]/30"
                 }`}
               >
                 {serviceCategories[category].icon}
@@ -277,14 +277,14 @@ const ServicesOverview: React.FC = () => {
         >
           <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-3xl border border-white/10 p-8 mb-8">
             {serviceCategories[activeCategory].title === "Custom Package" ? (
-              <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#FFD700]/20 p-8 md:p-12">
+              <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#EDC577]/20 p-8 md:p-12">
                 <h3 className="text-2xl font-bold text-white mb-8 text-center">
                   Contact Us to Start Your Project
                 </h3>
 
                 {isSubmitted ? (
-                  <div className="bg-gradient-to-r from-[#B8860B]/20 to-[#FFD700]/20 border border-[#FFD700]/30 rounded-2xl p-8 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full mb-4">
+                  <div className="bg-gradient-to-r from-[#8E6B0F]/20 to-[#EDC577]/20 border border-[#EDC577]/30 rounded-2xl p-8 text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#EDC577] to-[#C89B2C] rounded-full mb-4">
                       <svg
                         className="w-8 h-8 text-black"
                         fill="none"
@@ -299,7 +299,7 @@ const ServicesOverview: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <h4 className="text-2xl font-bold text-[#FFD700] mb-2">
+                    <h4 className="text-2xl font-bold text-[#EDC577] mb-2">
                       Thank You!
                     </h4>
                     <p className="text-gray-300 text-lg">
@@ -313,7 +313,7 @@ const ServicesOverview: React.FC = () => {
                       <div>
                         <label
                           htmlFor="firstName"
-                          className="block text-sm font-semibold text-[#FFD700] mb-2"
+                          className="block text-sm font-semibold text-[#EDC577] mb-2"
                         >
                           First Name *
                         </label>
@@ -324,14 +324,14 @@ const ServicesOverview: React.FC = () => {
                           required
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="rounded-2xl w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                          className="rounded-2xl w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                           placeholder="John"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="lastName"
-                          className="block text-sm font-semibold text-[#FFD700] mb-2"
+                          className="block text-sm font-semibold text-[#EDC577] mb-2"
                         >
                           Last Name *
                         </label>
@@ -342,7 +342,7 @@ const ServicesOverview: React.FC = () => {
                           required
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                          className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                           placeholder="Smith"
                         />
                       </div>
@@ -352,7 +352,7 @@ const ServicesOverview: React.FC = () => {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-semibold text-[#FFD700] mb-2"
+                        className="block text-sm font-semibold text-[#EDC577] mb-2"
                       >
                         Email Address *
                       </label>
@@ -363,7 +363,7 @@ const ServicesOverview: React.FC = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -372,7 +372,7 @@ const ServicesOverview: React.FC = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-semibold text-[#FFD700] mb-2"
+                        className="block text-sm font-semibold text-[#EDC577] mb-2"
                       >
                         Phone Number
                         <span className="text-gray-400 text-xs ml-1 font-normal">
@@ -385,7 +385,7 @@ const ServicesOverview: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -394,7 +394,7 @@ const ServicesOverview: React.FC = () => {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm font-semibold text-[#FFD700] mb-2"
+                        className="block text-sm font-semibold text-[#EDC577] mb-2"
                       >
                         Project Details *
                       </label>
@@ -405,7 +405,7 @@ const ServicesOverview: React.FC = () => {
                         rows={5}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 resize-vertical text-white placeholder-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 resize-vertical text-white placeholder-gray-400"
                         placeholder="Tell us about your space, timeline, and vision. What story do you want to tell?"
                       />
                     </div>
@@ -417,7 +417,7 @@ const ServicesOverview: React.FC = () => {
                       className={`w-full font-bold px-8 py-4 rounded-2xl text-lg transition-all duration-300 shadow-lg transform hover:scale-105 ${
                         isSubmitting
                           ? "bg-gray-600 cursor-not-allowed text-white"
-                          : "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black hover:shadow-2xl hover:shadow-[#FFD700]/25"
+                          : "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black hover:shadow-2xl hover:shadow-[#EDC577]/25"
                       }`}
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
@@ -444,13 +444,13 @@ const ServicesOverview: React.FC = () => {
                     (service, index) => (
                       <div
                         key={index}
-                        className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300"
+                        className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300"
                       >
                         <div className="flex justify-between items-start mb-3">
                           <h4 className="text-white font-semibold text-lg">
                             {service.name}
                           </h4>
-                          <span className="text-[#FFD700] font-bold text-lg">
+                          <span className="text-[#EDC577] font-bold text-lg">
                             {service.price}
                           </span>
                         </div>
@@ -467,7 +467,7 @@ const ServicesOverview: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="group relative inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/40">
+                    <button className="group relative inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/40">
                       <span className="relative z-10 flex items-center">
                         Book Your Shoot Now
                         <svg
@@ -485,7 +485,7 @@ const ServicesOverview: React.FC = () => {
                         </svg>
                       </span>
                       {/* Animated background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#DAA520] via-[#FFD700] to-[#B8860B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#C89B2C] via-[#EDC577] to-[#8E6B0F] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </button>
                   </Link>
                 </div>

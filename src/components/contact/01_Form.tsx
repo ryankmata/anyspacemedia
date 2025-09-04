@@ -169,7 +169,7 @@ const ContactForm: React.FC = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/5 via-[#FFD700]/10 to-[#DAA520]/5 opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#8E6B0F]/5 via-[#EDC577]/10 to-[#C89B2C]/5 opacity-50" />
       </div>
 
       {/* Main Contact Section */}
@@ -178,7 +178,7 @@ const ContactForm: React.FC = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
                 Get in Touch
               </span>
             </h2>
@@ -190,14 +190,14 @@ const ContactForm: React.FC = () => {
 
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#FFD700]/20 p-8 md:p-12">
+            <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#EDC577]/20 p-8 md:p-12">
               <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 Start Your Project
               </h3>
 
               {isSubmitted ? (
-                <div className="bg-gradient-to-r from-[#B8860B]/20 to-[#FFD700]/20 border border-[#FFD700]/30 rounded-2xl p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full mb-4">
+                <div className="bg-gradient-to-r from-[#8E6B0F]/20 to-[#EDC577]/20 border border-[#EDC577]/30 rounded-2xl p-8 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#EDC577] to-[#C89B2C] rounded-full mb-4">
                     <svg
                       className="w-8 h-8 text-black"
                       fill="none"
@@ -212,7 +212,7 @@ const ContactForm: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-bold text-[#FFD700] mb-2">
+                  <h4 className="text-2xl font-bold text-[#EDC577] mb-2">
                     Thank You!
                   </h4>
                   <p className="text-gray-300 text-lg">
@@ -226,7 +226,7 @@ const ContactForm: React.FC = () => {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="block text-sm font-semibold text-[#FFD700] mb-2"
+                        className="block text-sm font-semibold text-[#EDC577] mb-2"
                       >
                         First Name *
                       </label>
@@ -237,14 +237,14 @@ const ContactForm: React.FC = () => {
                         required
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                         placeholder="John"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="lastName"
-                        className="block text-sm font-semibold text-[#FFD700] mb-2"
+                        className="block text-sm font-semibold text-[#EDC577] mb-2"
                       >
                         Last Name *
                       </label>
@@ -255,7 +255,7 @@ const ContactForm: React.FC = () => {
                         required
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                         placeholder="Smith"
                       />
                     </div>
@@ -265,7 +265,7 @@ const ContactForm: React.FC = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-[#FFD700] mb-2"
+                      className="block text-sm font-semibold text-[#EDC577] mb-2"
                     >
                       Email Address *
                     </label>
@@ -276,7 +276,7 @@ const ContactForm: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -285,7 +285,7 @@ const ContactForm: React.FC = () => {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-semibold text-[#FFD700] mb-2"
+                      className="block text-sm font-semibold text-[#EDC577] mb-2"
                     >
                       Phone Number
                       <span className="text-gray-400 text-xs ml-1 font-normal">
@@ -298,7 +298,7 @@ const ContactForm: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white placeholder-gray-400"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white placeholder-gray-400"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -307,7 +307,7 @@ const ContactForm: React.FC = () => {
                   <div>
                     <label
                       htmlFor="inquiryType"
-                      className="block text-sm font-semibold text-[#FFD700] mb-2"
+                      className="block text-sm font-semibold text-[#EDC577] mb-2"
                     >
                       Project Type:
                     </label>
@@ -316,7 +316,7 @@ const ContactForm: React.FC = () => {
                       name="inquiryType"
                       value={formData.inquiryType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 text-white"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 text-white"
                     >
                       <option value="" className="bg-neutral-800 text-white">
                         Please select...
@@ -370,7 +370,7 @@ const ContactForm: React.FC = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-semibold text-[#FFD700] mb-2"
+                      className="block text-sm font-semibold text-[#EDC577] mb-2"
                     >
                       Project Details *
                     </label>
@@ -381,7 +381,7 @@ const ContactForm: React.FC = () => {
                       rows={5}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700] transition-all duration-300 resize-vertical text-white placeholder-gray-400"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl focus:ring-2 focus:ring-[#EDC577] focus:border-[#EDC577] transition-all duration-300 resize-vertical text-white placeholder-gray-400"
                       placeholder="Tell us about your space, timeline, and vision. What story do you want to tell?"
                     />
                   </div>
@@ -393,7 +393,7 @@ const ContactForm: React.FC = () => {
                     className={`w-full font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 shadow-lg transform hover:scale-105 ${
                       isSubmitting
                         ? "bg-gray-600 cursor-not-allowed text-white"
-                        : "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black hover:shadow-2xl hover:shadow-[#FFD700]/25"
+                        : "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black hover:shadow-2xl hover:shadow-[#EDC577]/25"
                     }`}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
@@ -423,22 +423,22 @@ const ContactForm: React.FC = () => {
                 {contactInfo.map((item, index) => (
                   <div
                     key={index}
-                    className="group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#FFD700]/10"
+                    className="group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-[#EDC577]/20 hover:border-[#EDC577]/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#EDC577]/10"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700]/30 to-[#B8860B]/30 rounded-xl flex items-center justify-center text-[#FFD700] group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#EDC577]/30 to-[#8E6B0F]/30 rounded-xl flex items-center justify-center text-[#EDC577] group-hover:scale-110 transition-transform duration-300">
                           {item.icon}
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-[#FFD700] mb-1 group-hover:text-white transition-colors duration-300">
+                        <h4 className="font-bold text-[#EDC577] mb-1 group-hover:text-white transition-colors duration-300">
                           {item.label}
                         </h4>
                         {item.link ? (
                           <a
                             href={item.link}
-                            className="text-white hover:text-[#FFD700] transition-colors duration-200 font-medium text-lg"
+                            className="text-white hover:text-[#EDC577] transition-colors duration-200 font-medium text-lg"
                           >
                             {item.value}
                           </a>
@@ -459,17 +459,17 @@ const ContactForm: React.FC = () => {
               </div>
 
               {/* Additional Services */}
-              <div className="bg-gradient-to-r from-[#B8860B]/20 via-[#FFD700]/20 to-[#DAA520]/20 rounded-2xl p-6 border border-[#FFD700]/30">
-                <h4 className="font-bold text-[#FFD700] mb-4 text-lg">
+              <div className="bg-gradient-to-r from-[#8E6B0F]/20 via-[#EDC577]/20 to-[#C89B2C]/20 rounded-2xl p-6 border border-[#EDC577]/30">
+                <h4 className="font-bold text-[#EDC577] mb-4 text-lg">
                   Want to Learn More First?
                 </h4>
                 <div className="space-y-3">
                   <Link
                     href="/gallery"
-                    className="flex items-center text-gray-300 hover:text-[#FFD700] transition-colors duration-200"
+                    className="flex items-center text-gray-300 hover:text-[#EDC577] transition-colors duration-200"
                   >
                     <svg
-                      className="w-4 h-4 mr-3 text-[#FFD700]"
+                      className="w-4 h-4 mr-3 text-[#EDC577]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -485,10 +485,10 @@ const ContactForm: React.FC = () => {
                   </Link>
                   <Link
                     href="/services"
-                    className="flex items-center text-gray-300 hover:text-[#FFD700] transition-colors duration-200"
+                    className="flex items-center text-gray-300 hover:text-[#EDC577] transition-colors duration-200"
                   >
                     <svg
-                      className="w-4 h-4 mr-3 text-[#FFD700]"
+                      className="w-4 h-4 mr-3 text-[#EDC577]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -504,10 +504,10 @@ const ContactForm: React.FC = () => {
                   </Link>
                   <a
                     href="mailto:contact@anyspacemedia.com"
-                    className="flex items-center text-gray-300 hover:text-[#FFD700] transition-colors duration-200"
+                    className="flex items-center text-gray-300 hover:text-[#EDC577] transition-colors duration-200"
                   >
                     <svg
-                      className="w-4 h-4 mr-3 text-[#FFD700]"
+                      className="w-4 h-4 mr-3 text-[#EDC577]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -529,13 +529,13 @@ const ContactForm: React.FC = () => {
       </div>
 
       {/* Closing Message */}
-      <div className="relative z-8 py-16 border-t border-[#FFD700]/20">
+      <div className="relative z-8 py-16 border-t border-[#EDC577]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/10 to-[#DAA520]/10 rounded-2xl p-8 border border-[#FFD700]/20">
+          <div className="bg-gradient-to-r from-[#8E6B0F]/10 via-[#EDC577]/10 to-[#C89B2C]/10 rounded-2xl p-8 border border-[#EDC577]/20">
             <p className="text-lg text-gray-300 italic mb-4">
               "Every great project begins with a conversation."
             </p>
-            <p className="text-[#FFD700] font-semibold">
+            <p className="text-[#EDC577] font-semibold">
               We look forward to capturing your vision and creating something
               extraordinary together.
             </p>

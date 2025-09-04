@@ -18,24 +18,25 @@ const ArchitectureCTA = () => {
 
   return (
     <section className="relative py-32 z-8 bg-gradient-to-br from-black via-neutral-900 to-black overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
         <div
-          className="absolute top-20 left-20 w-96 h-96 bg-gradient-radial from-[#FFD700]/10 to-transparent rounded-full blur-2xl animate-pulse"
+          className="absolute top-20 left-20 w-96 h-96 bg-gradient-radial from-[#EDC577]/10 to-transparent rounded-full blur-2xl animate-pulse"
           style={{ animationDuration: "4s" }}
         />
         <div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-radial from-[#B8860B]/10 to-transparent rounded-full blur-2xl animate-pulse"
+          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-radial from-[#8E6B0F]/10 to-transparent rounded-full blur-2xl animate-pulse"
           style={{ animationDuration: "6s", animationDelay: "2s" }}
         />
 
         {/* Geometric accents */}
         <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
-          <div className="w-2 h-32 bg-gradient-to-b from-transparent via-[#FFD700]/50 to-transparent" />
+          <div className="w-2 h-32 bg-gradient-to-b from-transparent via-[#EDC577]/50 to-transparent" />
         </div>
         <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-          <div className="w-2 h-32 bg-gradient-to-b from-transparent via-[#B8860B]/50 to-transparent" />
+          <div className="w-2 h-32 bg-gradient-to-b from-transparent via-[#8E6B0F]/50 to-transparent" />
         </div>
 
         {/* Subtle grid pattern */}
@@ -63,7 +64,7 @@ const ArchitectureCTA = () => {
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="text-white">Redefine Your </span>
               <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
                 Space Today
               </span>
             </h2>
@@ -83,7 +84,7 @@ const ArchitectureCTA = () => {
             className="grid md:grid-cols-3 gap-6 mb-12"
           >
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="text-[#FFD700] text-2xl mb-3">⚡</div>
+              <div className="text-[#EDC577] text-2xl mb-3">⚡</div>
               <h3 className="text-white font-bold text-lg mb-2">
                 Fast Turnaround
               </h3>
@@ -93,7 +94,7 @@ const ArchitectureCTA = () => {
               </p>
             </div>
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="text-[#FFD700] text-2xl mb-3">🏆</div>
+              <div className="text-[#EDC577] text-2xl mb-3">🏆</div>
               <h3 className="text-white font-bold text-lg mb-2">
                 Award-Winning Quality
               </h3>
@@ -103,7 +104,7 @@ const ArchitectureCTA = () => {
               </p>
             </div>
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="text-[#FFD700] text-2xl mb-3">💼</div>
+              <div className="text-[#EDC577] text-2xl mb-3">💼</div>
               <h3 className="text-white font-bold text-lg mb-2">
                 Full Service
               </h3>
@@ -123,7 +124,7 @@ const ArchitectureCTA = () => {
           >
             {/* Primary CTA */}
             <Link href="https://listings.anyspacemedia.com/order">
-              <button className="group relative inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/40">
+              <button className="group relative inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/40">
                 <span className="relative z-10 flex items-center">
                   Book Your Shoot Now
                   <svg
@@ -141,13 +142,13 @@ const ArchitectureCTA = () => {
                   </svg>
                 </span>
                 {/* Animated background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#DAA520] via-[#FFD700] to-[#B8860B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C89B2C] via-[#EDC577] to-[#8E6B0F] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </Link>
 
             {/* Secondary CTA */}
             <Link href="tel:14352166499">
-              <button className="group inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white font-bold text-xl rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300 hover:scale-105">
+              <button className="group inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white font-bold text-xl rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300 hover:scale-105">
                 <svg
                   className="mr-3 w-6 h-6 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
@@ -180,7 +181,7 @@ const ArchitectureCTA = () => {
                   key={index}
                   className="flex items-center justify-center text-sm text-gray-400"
                 >
-                  <div className="w-2 h-2 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full mr-2" />
+                  <div className="w-2 h-2 bg-gradient-to-r from-[#EDC577] to-[#C89B2C] rounded-full mr-2" />
                   {feature}
                 </div>
               ))}
@@ -191,7 +192,7 @@ const ArchitectureCTA = () => {
               <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-400">
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-[#FFD700]"
+                    className="w-5 h-5 text-[#EDC577]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -207,7 +208,7 @@ const ArchitectureCTA = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-[#FFD700]"
+                    className="w-5 h-5 text-[#EDC577]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -223,7 +224,7 @@ const ArchitectureCTA = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
-                    className="w-5 h-5 text-[#FFD700]"
+                    className="w-5 h-5 text-[#EDC577]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -241,13 +242,13 @@ const ArchitectureCTA = () => {
             </div>
 
             {/* Final Trust Signal 
-            <div className="bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/10 to-[#DAA520]/10 rounded-2xl p-6 border border-[#FFD700]/20">
+            <div className="bg-gradient-to-r from-[#8E6B0F]/10 via-[#EDC577]/10 to-[#C89B2C]/10 rounded-2xl p-6 border border-[#EDC577]/20">
               <p className="text-gray-300 text-center">
-                <span className="text-[#FFD700] font-semibold">
+                <span className="text-[#EDC577] font-semibold">
                   150+ architectural projects completed
                 </span>{" "}
                 •<span className="mx-2">98% client satisfaction rate</span> •
-                <span className="text-[#FFD700] font-semibold">
+                <span className="text-[#EDC577] font-semibold">
                   Licensed & insured nationwide
                 </span>
               </p>
@@ -257,7 +258,7 @@ const ArchitectureCTA = () => {
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
     </section>
   );
 };

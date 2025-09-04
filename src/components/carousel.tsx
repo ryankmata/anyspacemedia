@@ -78,8 +78,8 @@ export default function Showcase() {
     <section className="py-20 bg-gradient-to-br from-black via-neutral-900 to-black">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8E6B0F]/50 to-transparent" />
       </div>
       <div className="container mx-auto px-4">
         {/* Title */}
@@ -90,7 +90,7 @@ export default function Showcase() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Choose Your Space
             </span>
           </h2>
@@ -109,7 +109,7 @@ export default function Showcase() {
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 bottom-5 md:top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
+            className="absolute left-4 bottom-5 md:top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#EDC577]/50"
           >
             <svg
               className="w-6 h-6"
@@ -129,7 +129,7 @@ export default function Showcase() {
           {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-4 bottom-5 md:top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#FFD700]/50"
+            className="absolute right-4 bottom-5 md:top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-300 hover:scale-110 border border-white/20 hover:border-[#EDC577]/50"
           >
             <svg
               className="w-6 h-6"
@@ -213,7 +213,7 @@ export default function Showcase() {
                         isActive ? "" : "opacity-80"
                       }`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#B8860B]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#8E6B0F]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                     {/* Content */}
                     <div
@@ -224,7 +224,7 @@ export default function Showcase() {
                       <motion.h3
                         className={`text-2xl md:text-3xl font-bold mb-3 transition-colors duration-300 ${
                           isActive
-                            ? "group-hover:text-[#FFD700]"
+                            ? "group-hover:text-[#EDC577]"
                             : "text-gray-200"
                         }`}
                         initial={{ y: 20, opacity: 0 }}
@@ -257,7 +257,7 @@ export default function Showcase() {
                         >
                           <Link
                             href={card.link}
-                            className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:border-[#FFD700]/50"
+                            className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 hover:border-[#EDC577]/50"
                           >
                             Explore Services
                             <svg
@@ -283,7 +283,7 @@ export default function Showcase() {
                       <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-[#FFD700] to-[#DAA520] rounded-full shadow-lg"
+                        className="absolute top-6 right-6 w-3 h-3 bg-gradient-to-r from-[#EDC577] to-[#C89B2C] rounded-full shadow-lg"
                       />
                     )}*/}
                   </div>

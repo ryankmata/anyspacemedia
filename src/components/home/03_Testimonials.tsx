@@ -95,8 +95,8 @@ const TestimonialsSection = () => {
     <section className="pt-32 z-9 bg-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8E6B0F]/50 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -107,14 +107,14 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          {/*<div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#B8860B]/20 to-[#FFD700]/20 rounded-full border border-[#FFD700]/30 mb-6">
-            <span className="text-[#FFD700] font-semibold text-sm tracking-wider">
+          {/*<div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#8E6B0F]/20 to-[#EDC577]/20 rounded-full border border-[#EDC577]/30 mb-6">
+            <span className="text-[#EDC577] font-semibold text-sm tracking-wider">
               CLIENT SUCCESS STORIES
             </span>
           </div>*/}
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-white">What Our Clients </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Are Saying
             </span>
           </h2>
@@ -144,7 +144,7 @@ const TestimonialsSection = () => {
                       (_, i) => (
                         <svg
                           key={i}
-                          className="w-6 h-6 text-[#FFD700] mr-1"
+                          className="w-6 h-6 text-[#EDC577] mr-1"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -164,7 +164,7 @@ const TestimonialsSection = () => {
                     <h4 className="text-white font-bold text-lg mb-1">
                       {testimonials[activeTestimonial].name}
                     </h4>
-                    <p className="text-[#FFD700] font-semibold mb-1">
+                    <p className="text-[#EDC577] font-semibold mb-1">
                       {testimonials[activeTestimonial].role}
                     </p>
                     <p className="text-gray-400 text-sm">
@@ -175,7 +175,7 @@ const TestimonialsSection = () => {
 
                   {/* Project Tag 
                   <div className="inline-flex items-center">
-                    <span className="px-4 py-2 bg-gradient-to-r from-[#FFD700]/20 to-[#B8860B]/20 backdrop-blur-sm rounded-full text-[#FFD700] text-sm font-semibold border border-[#FFD700]/30">
+                    <span className="px-4 py-2 bg-gradient-to-r from-[#EDC577]/20 to-[#8E6B0F]/20 backdrop-blur-sm rounded-full text-[#EDC577] text-sm font-semibold border border-[#EDC577]/30">
                       Project: {testimonials[activeTestimonial].project}
                     </span>
                   </div>*/}
@@ -197,7 +197,7 @@ const TestimonialsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-200 hover:scale-110"
+            className="absolute left-4 top-3/4 md:top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-200 hover:scale-110"
           >
             <svg
               className="w-6 h-6"
@@ -216,7 +216,7 @@ const TestimonialsSection = () => {
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-200 hover:scale-110"
+            className="absolute right-4 top-3/4 md:top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all duration-200 hover:scale-110"
           >
             <svg
               className="w-6 h-6"
@@ -242,7 +242,7 @@ const TestimonialsSection = () => {
               onClick={() => setActiveTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === activeTestimonial
-                  ? "bg-gradient-to-r from-[#FFD700] to-[#DAA520] scale-125"
+                  ? "bg-gradient-to-r from-[#EDC577] to-[#C89B2C] scale-125"
                   : "bg-white/30 hover:bg-white/50"
               }`}
             />

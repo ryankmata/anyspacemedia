@@ -42,7 +42,7 @@ const Footer = () => {
   const { variant } = useFooterVariant();
 
   const bgClass = variant === "black" ? "bg-[#000000]" : "bg-[#FFFFFF]";
-  const bgInvertClass = variant === "black" ? "bg-[#FFD700]" : "bg-[#000000]";
+  const bgInvertClass = variant === "black" ? "bg-[#EDC577]" : "bg-[#000000]";
   const bgInvertClassAlt =
     variant === "black" ? "bg-[#FFFFFF]" : "bg-[#000000]";
   const textClass = variant === "black" ? "text-[#FFFFFF]" : "text-[#000000]";
@@ -54,7 +54,7 @@ const Footer = () => {
       ? "group-hover:text-[#000000]"
       : "group-hover:text-[#FFFFFF]";
   const borderClass =
-    variant === "black" ? "border-[#FFD700]/80" : "border-[#C2BFB8]/30";
+    variant === "black" ? "border-[#EDC577]/80" : "border-[#000000]/30";
 
   return (
     <footer className={`${bgClass} ${textClass} pt-16 pb-2 px-6`}>
@@ -187,7 +187,7 @@ const Footer = () => {
 
         {/* Column 4: Subscribe */}
         <div
-          className={`bg-[#FFD700]/10 p-6 rounded-lg -mt-6 pt-6 shadow-2xl border-1 border-[#FFD700]/80`}
+          className={`bg-[#EDC577]/10 p-6 rounded-lg -mt-6 pt-6 shadow-2xl border-1 border-[#EDC577]/80`}
         >
           <h4 className={`text-sm font-semibold ${textClass} mb-4`}>
             Subscribe
@@ -225,7 +225,7 @@ const Footer = () => {
                   placeholder="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-grow min-w-0 px-4 py-3 text-sm border-l-1 border-t-1 border-b-1 border-[#FFD700] text-gray-700 bg-white rounded-l-md border focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
+                  className="flex-grow min-w-0 px-4 py-3 text-sm border-l-1 border-t-1 border-b-1 border-[#EDC577] text-gray-700 bg-white rounded-l-md border focus:outline-none focus:ring-2 focus:ring-[#EDC577]"
                 />
                 <button
                   onClick={handleSubscribe}
@@ -234,7 +234,7 @@ const Footer = () => {
                   className={`px-4 py-3 rounded-r-md transition-colors duration-200 flex items-center justify-center ${
                     status === "loading"
                       ? "bg-gray-400 cursor-not-allowed"
-                      : "border-r-1 border-t-1 border-b-1 border-[#FFD700] bg-[#FFD700]/10 hover:bg-[#FFD700]/50"
+                      : "border-r-1 border-t-1 border-b-1 border-[#EDC577] bg-[#EDC577]/10 hover:bg-[#EDC577]/50"
                   } text-white`}
                   aria-label="Subscribe"
                 >

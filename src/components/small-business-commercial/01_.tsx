@@ -63,8 +63,8 @@ const CommercialHero = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#B8860B]/20 to-[#FFD700]/20 rounded-full border border-[#FFD700]/30 mb-8">
-                <span className="text-[#FFD700] font-semibold text-sm tracking-wider">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#8E6B0F]/20 to-[#EDC577]/20 rounded-full border border-[#EDC577]/30 mb-8">
+                <span className="text-[#EDC577] font-semibold text-sm tracking-wider">
                   BUSINESS MARKETING SOLUTIONS
                 </span>
               </div>
@@ -72,7 +72,7 @@ const CommercialHero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-8">
                 <span className="text-white">Small Business &</span>
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
                   Commercial Media
                 </span>
               </h1>
@@ -85,12 +85,12 @@ const CommercialHero = () => {
               </p>
 
               <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
-                <button className="group inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-xl rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/40 transition-all duration-300 hover:scale-105">
+                <button className="group inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-xl rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/40 transition-all duration-300 hover:scale-105">
                   Start Your Project
                   <ArrowRight className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
 
-                <button className="group inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white font-bold text-xl rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300">
+                <button className="group inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white font-bold text-xl rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300">
                   <Play className="mr-3 w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
                   View Our Work
                 </button>
@@ -100,9 +100,9 @@ const CommercialHero = () => {
         </div>
 
         {/* Floating elements */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-[#FFD700]/10 to-transparent rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-[#EDC577]/10 to-transparent rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-l from-[#B8860B]/10 to-transparent rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-l from-[#8E6B0F]/10 to-transparent rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
       </section>
@@ -220,8 +220,8 @@ const BusinessTypes = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/5 w-96 h-96 bg-gradient-to-r from-[#FFD700]/5 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/5 w-96 h-96 bg-gradient-to-l from-[#B8860B]/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/5 w-96 h-96 bg-gradient-to-r from-[#EDC577]/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/5 w-96 h-96 bg-gradient-to-l from-[#8E6B0F]/5 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -233,7 +233,7 @@ const BusinessTypes = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Every Business </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Has a Story
             </span>
           </h2>
@@ -255,9 +255,9 @@ const BusinessTypes = () => {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="group relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:border-[#FFD700]/30 transition-all duration-300 hover:scale-105 overflow-hidden"
+              className="group relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:border-[#EDC577]/30 transition-all duration-300 hover:scale-105 overflow-hidden"
             >
-              <div className="text-[#FFD700] mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-[#EDC577] mb-4 group-hover:scale-110 transition-transform duration-300">
                 {business.icon}
               </div>
 
@@ -275,7 +275,7 @@ const BusinessTypes = () => {
                     key={idx}
                     className="flex items-center text-xs text-gray-400"
                   >
-                    <div className="w-1 h-1 bg-[#FFD700] rounded-full mr-2" />
+                    <div className="w-1 h-1 bg-[#EDC577] rounded-full mr-2" />
                     {service}
                   </div>
                 ))}
@@ -283,7 +283,7 @@ const BusinessTypes = () => {
 
               {/* Hover Button */}
               <div className="absolute bottom-4 right-4 transform translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 ease-out">
-                <button className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-semibold text-xs rounded-full hover:shadow-lg transition-all duration-200">
+                <button className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-semibold text-xs rounded-full hover:shadow-lg transition-all duration-200">
                   Get Quote
                   <ArrowRight className="ml-1 w-3 h-3" />
                 </button>
@@ -405,7 +405,7 @@ const MarketingSolutions = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Complete </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Marketing Solutions
             </span>
           </h2>
@@ -425,7 +425,7 @@ const MarketingSolutions = () => {
                   onClick={() => setActiveTab(tab)}
                   className={`flex items-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     activeTab === tab
-                      ? "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black"
+                      ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black"
                       : "text-white hover:bg-white/10"
                   }`}
                 >
@@ -459,9 +459,9 @@ const MarketingSolutions = () => {
               {solutions[activeTab].features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300"
                 >
-                  <div className="text-[#FFD700] mb-4">{feature.icon}</div>
+                  <div className="text-[#EDC577] mb-4">{feature.icon}</div>
                   <h4 className="text-white font-semibold mb-2">
                     {feature.title}
                   </h4>
@@ -544,7 +544,7 @@ const ServicesAndPricing = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Simple, </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Transparent Pricing
             </span>
           </h2>
@@ -567,13 +567,13 @@ const ServicesAndPricing = () => {
               }}
               className={`relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-3xl border p-8 transition-all duration-300 hover:scale-105 ${
                 pkg.popular
-                  ? "border-[#FFD700] shadow-2xl shadow-[#FFD700]/20"
-                  : "border-white/10 hover:border-[#FFD700]/30"
+                  ? "border-[#EDC577] shadow-2xl shadow-[#EDC577]/20"
+                  : "border-white/10 hover:border-[#EDC577]/30"
               }`}
             >
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black px-6 py-2 rounded-full font-bold text-sm">
+                  <div className="bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black px-6 py-2 rounded-full font-bold text-sm">
                     Most Popular
                   </div>
                 </div>
@@ -583,7 +583,7 @@ const ServicesAndPricing = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {pkg.name}
                 </h3>
-                <div className="text-4xl font-bold text-[#FFD700] mb-2">
+                <div className="text-4xl font-bold text-[#EDC577] mb-2">
                   {pkg.price}
                 </div>
                 <p className="text-gray-400">{pkg.description}</p>
@@ -592,7 +592,7 @@ const ServicesAndPricing = () => {
               <div className="space-y-3 mb-8">
                 {pkg.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-[#FFD700] mr-3" />
+                    <CheckCircle className="w-5 h-5 text-[#EDC577] mr-3" />
                     {feature}
                   </div>
                 ))}
@@ -601,8 +601,8 @@ const ServicesAndPricing = () => {
               <button
                 className={`w-full py-4 rounded-full font-bold transition-all duration-300 hover:scale-105 ${
                   pkg.popular
-                    ? "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black hover:shadow-2xl hover:shadow-[#FFD700]/40"
-                    : "bg-white/10 text-white border border-white/20 hover:bg-[#FFD700]/10 hover:border-[#FFD700]/50"
+                    ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black hover:shadow-2xl hover:shadow-[#EDC577]/40"
+                    : "bg-white/10 text-white border border-white/20 hover:bg-[#EDC577]/10 hover:border-[#EDC577]/50"
                 }`}
               >
                 Get Started
@@ -616,7 +616,7 @@ const ServicesAndPricing = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="text-center bg-gradient-to-r from-[#FFD700]/10 via-[#B8860B]/5 to-[#FFD700]/10 rounded-3xl p-12 border border-[#FFD700]/20"
+          className="text-center bg-gradient-to-r from-[#EDC577]/10 via-[#8E6B0F]/5 to-[#EDC577]/10 rounded-3xl p-12 border border-[#EDC577]/20"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
             Need Something Custom?
@@ -625,7 +625,7 @@ const ServicesAndPricing = () => {
             We create tailored packages for unique business needs, ongoing
             partnerships, and large-scale projects.
           </p>
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/30 transition-all duration-300 hover:scale-105">
+          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/30 transition-all duration-300 hover:scale-105">
             Discuss Custom Solutions
             <Briefcase className="ml-2 w-5 h-5" />
           </button>
@@ -646,9 +646,9 @@ const FinalCTA = () => {
   return (
     <section className="py-32 bg-gradient-to-br from-black via-neutral-900 to-black relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-radial from-[#FFD700]/10 to-transparent rounded-full blur-2xl animate-pulse" />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-radial from-[#EDC577]/10 to-transparent rounded-full blur-2xl animate-pulse" />
         <div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-radial from-[#B8860B]/10 to-transparent rounded-full blur-2xl animate-pulse"
+          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-radial from-[#8E6B0F]/10 to-transparent rounded-full blur-2xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
       </div>
@@ -662,7 +662,7 @@ const FinalCTA = () => {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="text-white">Ready to Grow </span>
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Your Business?
             </span>
           </h2>
@@ -674,12 +674,12 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-12">
-            <button className="group inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-xl rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/40 transition-all duration-300 hover:scale-105">
+            <button className="group inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-xl rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/40 transition-all duration-300 hover:scale-105">
               Start Your Project Today
               <ArrowRight className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
 
-            <button className="group inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white font-bold text-xl rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300">
+            <button className="group inline-flex items-center px-10 py-5 bg-transparent border-2 border-white/30 text-white font-bold text-xl rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300">
               <Camera className="mr-3 w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
               Free Consultation
             </button>
@@ -688,15 +688,15 @@ const FinalCTA = () => {
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-400 pt-8 border-t border-white/10">
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-[#FFD700]" />
+              <Clock className="w-5 h-5 text-[#EDC577]" />
               <span>Available 7 Days a Week</span>
             </div>
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-[#FFD700]" />
+              <Award className="w-5 h-5 text-[#EDC577]" />
               <span>150+ Successful Projects</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-[#FFD700]" />
+              <Shield className="w-5 h-5 text-[#EDC577]" />
               <span>Licensed & Insured</span>
             </div>
           </div>

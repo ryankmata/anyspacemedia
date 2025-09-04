@@ -273,11 +273,7 @@ const PortfolioShowcase: React.FC = () => {
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
           <div className="transform opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-            <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#FFD700]/20 to-[#B8860B]/20 backdrop-blur-sm rounded-full text-[#FFD700] text-xs font-semibold mb-2 border border-[#FFD700]/30">
-              {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
-            </span>
             <h3 className="text-white font-bold text-lg mb-1">{item.title}</h3>
-            <p className="text-gray-300 text-sm">{item.description}</p>
           </div>
         </div>
 
@@ -305,13 +301,13 @@ const PortfolioShowcase: React.FC = () => {
     <section className="pb-32 pt-20 z-8 bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />*/}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8E6B0F]/50 to-transparent" />*/}
       </div>
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-[#FFD700]/5 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gradient-to-l from-[#B8860B]/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-[#EDC577]/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gradient-to-l from-[#8E6B0F]/5 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -324,7 +320,7 @@ const PortfolioShowcase: React.FC = () => {
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-white">Portfolio </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Gallery
             </span>
           </h2>
@@ -351,8 +347,8 @@ const PortfolioShowcase: React.FC = () => {
               }}
               className={`group relative px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 ${
                 filter === category.id
-                  ? "bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black"
-                  : "bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-[#FFD700]/50"
+                  ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black"
+                  : "bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:border-[#EDC577]/50"
               }`}
             >
               {category.name}
@@ -391,7 +387,7 @@ const PortfolioShowcase: React.FC = () => {
           >
             <button
               onClick={showMoreImages}
-              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#B8860B]/20 via-[#FFD700]/20 to-[#DAA520]/20 backdrop-blur-sm border-2 border-[#FFD700]/50 text-[#FFD700] font-bold rounded-full hover:bg-gradient-to-r hover:from-[#B8860B] hover:via-[#FFD700] hover:to-[#DAA520] hover:text-black hover:border-transparent transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#8E6B0F]/20 via-[#EDC577]/20 to-[#C89B2C]/20 backdrop-blur-sm border-2 border-[#EDC577]/50 text-[#EDC577] font-bold rounded-full hover:bg-gradient-to-r hover:from-[#8E6B0F] hover:via-[#EDC577] hover:to-[#C89B2C] hover:text-black hover:border-transparent transition-all duration-300 hover:scale-105"
             >
               Show More Projects
               <span className="ml-2 text-sm opacity-75">
@@ -438,7 +434,7 @@ const PortfolioShowcase: React.FC = () => {
                   className="w-full h-full object-contain"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#FFD700]/20 to-[#B8860B]/20 backdrop-blur-sm rounded-full text-[#FFD700] text-sm font-semibold mb-2 border border-[#FFD700]/30">
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#EDC577]/20 to-[#8E6B0F]/20 backdrop-blur-sm rounded-full text-[#EDC577] text-sm font-semibold mb-2 border border-[#EDC577]/30">
                     {selectedImage.category.charAt(0).toUpperCase() +
                       selectedImage.category.slice(1)}
                   </span>

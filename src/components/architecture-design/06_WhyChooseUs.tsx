@@ -84,9 +84,9 @@ const WhyChooseUs: React.FC = () => {
     <section className="py-24 bg-gradient-to-b from-black via-neutral-950 to-neutral-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        <div className="absolute top-1/4 left-1/6 w-80 h-80 bg-gradient-to-r from-[#FFD700]/6 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-gradient-to-l from-[#B8860B]/6 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+        <div className="absolute top-1/4 left-1/6 w-80 h-80 bg-gradient-to-r from-[#EDC577]/6 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-gradient-to-l from-[#8E6B0F]/6 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -99,7 +99,7 @@ const WhyChooseUs: React.FC = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Why Design Professionals </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Choose Us
             </span>
           </h2>
@@ -125,7 +125,7 @@ const WhyChooseUs: React.FC = () => {
               className="group text-center"
             >
               {/* Icon Circle */}
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#FFD700]/20 to-[#B8860B]/20 rounded-full flex items-center justify-center text-[#FFD700] border border-[#FFD700]/30 group-hover:scale-110 group-hover:border-[#FFD700]/50 transition-all duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#EDC577]/20 to-[#8E6B0F]/20 rounded-full flex items-center justify-center text-[#EDC577] border border-[#EDC577]/30 group-hover:scale-110 group-hover:border-[#EDC577]/50 transition-all duration-300">
                 {advantage.icon}
               </div>
 
@@ -136,8 +136,8 @@ const WhyChooseUs: React.FC = () => {
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {advantage.description}
               </p>
-              <div className="inline-flex items-center px-4 py-2 bg-[#FFD700]/10 rounded-full border border-[#FFD700]/20">
-                <span className="text-[#FFD700] font-semibold text-sm">
+              <div className="inline-flex items-center px-4 py-2 bg-[#EDC577]/10 rounded-full border border-[#EDC577]/20">
+                <span className="text-[#EDC577] font-semibold text-sm">
                   {advantage.stats}
                 </span>
               </div>
@@ -166,13 +166,13 @@ const WhyChooseUs: React.FC = () => {
             {processSteps.map((step, index) => (
               <div key={index} className="text-center relative">
                 {/* Step Number 
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#FFD700] to-[#B8860B] rounded-full flex items-center justify-center text-black font-bold text-xl">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#EDC577] to-[#8E6B0F] rounded-full flex items-center justify-center text-black font-bold text-xl">
                   {step.number}
                 </div>
 
                 {/* Connector Line (except last item) 
                 {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-[#FFD700]/50 to-[#B8860B]/50 transform translate-x-8" />
+                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-[#EDC577]/50 to-[#8E6B0F]/50 transform translate-x-8" />
                 )}
 
                 {/* Content 
@@ -203,11 +203,11 @@ const WhyChooseUs: React.FC = () => {
             Media to showcase their work at the highest level.
           </p>*/}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/30 transition-all duration-300 hover:scale-105">
+            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/30 transition-all duration-300 hover:scale-105">
               Start Your Project
               <Camera className="ml-2 w-5 h-5" />
             </button>
-            <button className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:border-[#FFD700] hover:bg-[#FFD700]/10 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300">
               View Our Portfolio
               <Building2 className="ml-2 w-5 h-5" />
             </button>

@@ -278,8 +278,8 @@ const WhyChooseUs = () => {
     <section className="py-24 z-9 bg-transparent relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
-        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#B8860B]/50 to-transparent" />*/}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#EDC577]/50 to-transparent" />
+        {/*<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8E6B0F]/50 to-transparent" />*/}
       </div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -290,7 +290,7 @@ const WhyChooseUs = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Excellence
             </span>{" "}
             in Every Frame
@@ -313,12 +313,12 @@ const WhyChooseUs = () => {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              className="bg-gradient-to-b from-white/5 to-white/2 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300 group hover:transform hover:scale-105"
+              className="bg-gradient-to-b from-white/5 to-white/2 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300 group hover:transform hover:scale-105"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 text-[#FFD700]">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 text-[#EDC577]">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#FFD700] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#EDC577] transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
@@ -333,12 +333,12 @@ const WhyChooseUs = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="bg-gradient-to-r from-[#B8860B]/20 via-[#FFD700]/20 to-[#DAA520]/20 rounded-3xl p-8 md:p-12 mb-16 border border-[#FFD700]/20"
+          className="bg-gradient-to-r from-[#8E6B0F]/20 via-[#EDC577]/20 to-[#C89B2C]/20 rounded-3xl p-8 md:p-12 mb-16 border border-[#EDC577]/20"
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#DAA520] to-[#B8860B] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#EDC577] via-[#C89B2C] to-[#8E6B0F] mb-2">
                   {stat.number}
                 </div>
                 <div className="text-white font-medium">{stat.label}</div>
@@ -377,7 +377,7 @@ const WhyChooseUs = () => {
           className="text-center"
         >
           <Link href="/#choose-your-space">
-            <button className="group inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/25 transition-all duration-300 hover:scale-105">
+            <button className="group inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/25 transition-all duration-300 hover:scale-105">
               Choose Your Space
               <svg
                 className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"

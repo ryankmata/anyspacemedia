@@ -127,7 +127,7 @@ const ShowcaseGalleries = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
               Choose Your Space
             </span>
           </h2>
@@ -152,7 +152,7 @@ const ShowcaseGalleries = () => {
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/10 via-transparent to-[#DAA520]/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#8E6B0F]/10 via-transparent to-[#C89B2C]/10" />
 
             {/* Image Info Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
@@ -172,7 +172,7 @@ const ShowcaseGalleries = () => {
 
                 <Link
                   href={galleryItems[activeImage].link}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#FFD700]/20 to-[#B8860B]/20 hover:bg-white/20 backdrop-blur-sm border border-[#FFD700]/30 rounded-full text-[#FFD700] font-semibold transition-all duration-300 hover:scale-105 hover:border-[#FFD700]/50"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#EDC577]/20 to-[#8E6B0F]/20 hover:bg-white/20 backdrop-blur-sm border border-[#EDC577]/30 rounded-full text-[#EDC577] font-semibold transition-all duration-300 hover:scale-105 hover:border-[#EDC577]/50"
                 >
                   Explore Services
                   <svg
@@ -207,7 +207,7 @@ const ShowcaseGalleries = () => {
               onClick={() => handleThumbnailClick(index)}
               className={`relative aspect-square rounded-xl overflow-hidden transition-all duration-500 ${
                 activeImage === index
-                  ? "ring-3 ring-[#FFD700] scale-105 shadow-lg shadow-[#FFD700]/25"
+                  ? "ring-3 ring-[#EDC577] scale-105 shadow-lg shadow-[#EDC577]/25"
                   : "hover:scale-105 opacity-70 hover:opacity-100"
               }`}
             >
@@ -235,7 +235,7 @@ const ShowcaseGalleries = () => {
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           className="text-center"
         >
-          <button className="group inline-flex items-center px-12 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-[#FFD700] text-[#FFD700] font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#FFD700]/25 transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#B8860B] hover:via-[#FFD700] hover:to-[#DAA520] hover:text-black">
+          <button className="group inline-flex items-center px-12 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-[#EDC577] text-[#EDC577] font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/25 transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-[#8E6B0F] hover:via-[#EDC577] hover:to-[#C89B2C] hover:text-black">
             View Full Gallery
             <svg
               className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"

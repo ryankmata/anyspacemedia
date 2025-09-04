@@ -17,11 +17,11 @@ const ContactHero: React.FC = () => {
     <div className="relative z-9 bg-gradient-to-br from-black via-neutral-900 to-black overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/10 via-[#FFD700]/20 to-[#DAA520]/10" />
-        <div className="absolute top-20 left-10 w-24 h-24 bg-[#FFD700]/10 rounded-full animate-pulse" />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-[#B8860B]/20 rounded-lg rotate-45 animate-bounce" />
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-[#FFD700]/10 rounded-full animate-pulse delay-1000" />
-        <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-[#DAA520]/20 rounded-lg rotate-12 animate-pulse delay-500" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#8E6B0F]/10 via-[#EDC577]/20 to-[#C89B2C]/10" />
+        <div className="absolute top-20 left-10 w-24 h-24 bg-[#EDC577]/10 rounded-full animate-pulse" />
+        <div className="absolute top-40 right-20 w-16 h-16 bg-[#8E6B0F]/20 rounded-lg rotate-45 animate-bounce" />
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-[#EDC577]/10 rounded-full animate-pulse delay-1000" />
+        <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-[#C89B2C]/20 rounded-lg rotate-12 animate-pulse delay-500" />
       </div>
 
       {/* Main Content */}
@@ -40,7 +40,7 @@ const ContactHero: React.FC = () => {
                 style={{ transitionDelay: "200ms" }}
               >
                 <span className="text-white">Let's Capture Something</span>{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
                   Extraordinary
                 </span>
               </h1>
@@ -71,7 +71,7 @@ const ContactHero: React.FC = () => {
             >
               <a
                 href="#contact-form"
-                className="group relative inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#B8860B] via-[#FFD700] to-[#DAA520] text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/30"
+                className="group relative inline-flex items-center px-12 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/30"
               >
                 <span className="relative z-10 flex items-center">
                   Start Your Project
@@ -89,12 +89,12 @@ const ContactHero: React.FC = () => {
                     />
                   </svg>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#DAA520] via-[#FFD700] to-[#B8860B] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C89B2C] via-[#EDC577] to-[#8E6B0F] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
 
               <a
                 href="tel:+14352166499"
-                className="group inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-[#FFD700] text-[#FFD700] font-semibold text-lg rounded-full hover:bg-[#FFD700]/20 transition-all duration-300 hover:scale-105"
+                className="group inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-[#EDC577] text-[#EDC577] font-semibold text-lg rounded-full hover:bg-[#EDC577]/20 transition-all duration-300 hover:scale-105"
               >
                 <svg
                   className="mr-3 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
@@ -118,7 +118,7 @@ const ContactHero: React.FC = () => {
           <div className="space-y-6">
             {/* Fast Response */}
             <div
-              className={`group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/10 ${
+              className={`group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 border border-[#EDC577]/20 hover:border-[#EDC577]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/10 ${
                 isVisible
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-16"
@@ -130,9 +130,9 @@ const ContactHero: React.FC = () => {
               }}
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#FFD700]/30 to-[#B8860B]/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#EDC577]/30 to-[#8E6B0F]/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-6 h-6 text-[#FFD700]"
+                    className="w-6 h-6 text-[#EDC577]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -146,7 +146,7 @@ const ContactHero: React.FC = () => {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#FFD700] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#EDC577] transition-colors duration-300">
                     Fast Response
                   </h3>
                   <p className="text-gray-300 text-base leading-relaxed">
@@ -159,7 +159,7 @@ const ContactHero: React.FC = () => {
 
             {/* Professional Excellence */}
             <div
-              className={`group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/10 ${
+              className={`group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 border border-[#EDC577]/20 hover:border-[#EDC577]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/10 ${
                 isVisible
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-16"
@@ -171,9 +171,9 @@ const ContactHero: React.FC = () => {
               }}
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#FFD700]/30 to-[#B8860B]/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#EDC577]/30 to-[#8E6B0F]/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-6 h-6 text-[#FFD700]"
+                    className="w-6 h-6 text-[#EDC577]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -187,7 +187,7 @@ const ContactHero: React.FC = () => {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#FFD700] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#EDC577] transition-colors duration-300">
                     Professional Excellence
                   </h3>
                   <p className="text-gray-300 text-base leading-relaxed">
@@ -200,7 +200,7 @@ const ContactHero: React.FC = () => {
 
             {/* Complete Service */}
             <div
-              className={`group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 border border-[#FFD700]/20 hover:border-[#FFD700]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FFD700]/10 ${
+              className={`group bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 border border-[#EDC577]/20 hover:border-[#EDC577]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/10 ${
                 isVisible
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-16"
@@ -212,9 +212,9 @@ const ContactHero: React.FC = () => {
               }}
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#FFD700]/30 to-[#B8860B]/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#EDC577]/30 to-[#8E6B0F]/30 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <svg
-                    className="w-6 h-6 text-[#FFD700]"
+                    className="w-6 h-6 text-[#EDC577]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -228,7 +228,7 @@ const ContactHero: React.FC = () => {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#FFD700] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#EDC577] transition-colors duration-300">
                     Complete Service
                   </h3>
                   <p className="text-gray-300 text-base leading-relaxed">
@@ -244,12 +244,12 @@ const ContactHero: React.FC = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2">
-        <p className="text-[#FFD700]/80 text-xs tracking-widest font-black">
+        <p className="text-[#EDC577]/80 text-xs tracking-widest font-black">
           S C R O L L&nbsp;&nbsp;T O&nbsp;&nbsp;C O N T A C T
         </p>
         <div className="flex flex-col items-center">
           <svg
-            className="w-4 h-4 text-[#FFD700] animate-bounce"
+            className="w-4 h-4 text-[#EDC577] animate-bounce"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
