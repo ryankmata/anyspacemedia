@@ -9,6 +9,7 @@ import {
   BookOpen,
   HelpCircle,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -94,6 +95,7 @@ const WhoWeServe = () => {
       ],
     },
   ];
+  const [open, setOpen] = useState<Record<number, boolean>>({});
 
   return (
     <section className="pt-24 pb-10 z-9 bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden">
@@ -107,7 +109,7 @@ const WhoWeServe = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-20"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Who We </span>
@@ -121,8 +123,76 @@ const WhoWeServe = () => {
           </p>
         </motion.div>
 
-        {/* Client Types Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Mobile Client Types Grid */}
+        <div className="md:hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-2xl border border-[#edc577]/10 p-4 sm:p-6 overflow-hidden"
+          >
+            <ul className="divide-y divide-[#edc577]/10 pb-16">
+              {clientTypes.map((client, i) => {
+                const isOpen = !!open[i];
+                return (
+                  <li key={i} className="py-3">
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      onClick={() => setOpen((s) => ({ ...s, [i]: !s[i] }))}
+                      className="w-full flex items-center gap-3"
+                    >
+                      <span className="text-[#EDC577] shrink-0">
+                        {client.icon}
+                      </span>
+                      <span className="text-white font-semibold text-base flex-1 text-left">
+                        {client.title}
+                      </span>
+                      <ChevronDown
+                        className={`w-5 h-5 text-gray-300 transition-transform ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    <motion.div
+                      initial={false}
+                      animate={{
+                        height: isOpen ? "auto" : 0,
+                        opacity: isOpen ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-3 space-y-2 pl-9">
+                        {client.benefits.map((b, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-start text-sm text-gray-300"
+                          >
+                            <div className="mt-1 w-1.5 h-1.5 bg-[#EDC577] rounded-full mr-3" />
+                            <span>{b}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <Link
+              href="#services"
+              className="absolute bottom-4 right-4 inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-semibold text-sm rounded-full hover:shadow-lg hover:shadow-[#EDC577]/40 transition-all duration-200"
+            >
+              Explore Services
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+
+        {/* Desktop Client Types Grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
           {clientTypes.map((client, index) => (
             <motion.div
               key={index}

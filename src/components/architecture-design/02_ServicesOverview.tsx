@@ -243,7 +243,7 @@ const ServicesOverview: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center mb-12"
         >
-          <div className="flex bg-white/5 backdrop-blur-sm rounded-2xl p-2 border border-white/10">
+          <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap bg-white/5 backdrop-blur-sm rounded-2xl p-2 border border-white/10">
             {(
               Object.keys(serviceCategories) as Array<
                 keyof typeof serviceCategories
@@ -252,14 +252,16 @@ const ServicesOverview: React.FC = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`flex items-center px-6 py-3 rounded-2xl font-semibold transition-all duration-300 mx-6 my-3 bg-white/10 ${
+                className={`flex items-center justify-center px-4 py-3 sm:px-6 rounded-2xl font-semibold transition-all duration-300 md:mx-6 md:my-3 bg-white/10 text-sm sm:text-base ${
                   activeCategory === category
                     ? "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black"
-                    : "text-white hover:bg-[#EDC577]/30"
+                    : "text-white hover:bg-[#EDC577]/30 hover:scale-110"
                 }`}
               >
-                {serviceCategories[category].icon}
-                <span className="ml-2">
+                <span className="flex-shrink-0">
+                  {serviceCategories[category].icon}
+                </span>
+                <span className="ml-2 whitespace-nowrap text-center">
                   {serviceCategories[category].title}
                 </span>
               </button>
@@ -275,15 +277,15 @@ const ServicesOverview: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-3xl border border-white/10 p-8 mb-8">
+          <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm rounded-3xl border border-white/10 p-4 sm:p-8 mb-8">
             {serviceCategories[activeCategory].title === "Custom Package" ? (
-              <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#EDC577]/20 p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+              <div className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm rounded-3xl shadow-2xl border border-[#EDC577]/20 p-6 sm:p-8 md:p-12">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8 text-center">
                   Contact Us to Start Your Project
                 </h3>
 
                 {isSubmitted ? (
-                  <div className="bg-gradient-to-r from-[#8E6B0F]/20 to-[#EDC577]/20 border border-[#EDC577]/30 rounded-2xl p-8 text-center">
+                  <div className="bg-gradient-to-r from-[#8E6B0F]/20 to-[#EDC577]/20 border border-[#EDC577]/30 rounded-2xl p-6 sm:p-8 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#EDC577] to-[#C89B2C] rounded-full mb-4">
                       <svg
                         className="w-8 h-8 text-black"
@@ -299,10 +301,10 @@ const ServicesOverview: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <h4 className="text-2xl font-bold text-[#EDC577] mb-2">
+                    <h4 className="text-xl sm:text-2xl font-bold text-[#EDC577] mb-2">
                       Thank You!
                     </h4>
-                    <p className="text-gray-300 text-lg">
+                    <p className="text-gray-300 text-base sm:text-lg">
                       We'll be in touch within 24 hours to discuss your project.
                     </p>
                   </div>
@@ -414,7 +416,7 @@ const ServicesOverview: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`w-full font-bold px-8 py-4 rounded-2xl text-lg transition-all duration-300 shadow-lg transform hover:scale-105 ${
+                      className={`w-full font-bold px-6 sm:px-8 py-4 rounded-2xl text-base sm:text-lg transition-all duration-300 shadow-lg transform hover:scale-105 ${
                         isSubmitting
                           ? "bg-gray-600 cursor-not-allowed text-white"
                           : "bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black hover:shadow-2xl hover:shadow-[#EDC577]/25"
@@ -426,31 +428,33 @@ const ServicesOverview: React.FC = () => {
                 )}
                 {submitError && (
                   <div className="bg-red-500/20 border border-red-500/30 rounded-xl p-4 mt-4">
-                    <p className="text-red-300">{submitError}</p>
+                    <p className="text-red-300 text-sm sm:text-base">
+                      {submitError}
+                    </p>
                   </div>
                 )}
               </div>
             ) : (
               <>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                   {serviceCategories[activeCategory].title}
                 </h3>
-                <p className="text-gray-300 text-lg mb-8">
+                <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8">
                   {serviceCategories[activeCategory].description}
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 ">
+                <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
                   {serviceCategories[activeCategory].services.map(
                     (service, index) => (
                       <div
                         key={index}
-                        className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300"
+                        className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/10 hover:border-[#EDC577]/30 transition-all duration-300"
                       >
-                        <div className="flex justify-between items-start mb-3">
-                          <h4 className="text-white font-semibold text-lg">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3">
+                          <h4 className="text-white font-semibold text-base sm:text-lg mb-2 sm:mb-0">
                             {service.name}
                           </h4>
-                          <span className="text-[#EDC577] font-bold text-lg">
+                          <span className="text-[#EDC577] font-bold text-base sm:text-lg flex-shrink-0">
                             {service.price}
                           </span>
                         </div>
@@ -461,17 +465,20 @@ const ServicesOverview: React.FC = () => {
                     )
                   )}
                 </div>
-                <div className="flex justify-center mt-10">
+                <div className="flex justify-center mt-8 sm:mt-10">
                   <Link
                     href="https://listings.anyspacemedia.com/order"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="group relative inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/40">
+                    <button className="group relative inline-flex items-center px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold text-lg sm:text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#EDC577]/40">
                       <span className="relative z-10 flex items-center">
-                        Book Your Shoot Now
+                        <span className="hidden sm:inline">
+                          Book Your Shoot Now
+                        </span>
+                        <span className="sm:hidden">Book Now</span>
                         <svg
-                          className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1"
+                          className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:translate-x-1"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

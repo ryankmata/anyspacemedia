@@ -13,6 +13,7 @@ import {
   Shield,
   Plane,
 } from "lucide-react";
+import Link from "next/link";
 
 // Why Choose Us Component
 const WhyChooseUs: React.FC = () => {
@@ -136,11 +137,11 @@ const WhyChooseUs: React.FC = () => {
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {advantage.description}
               </p>
-              <div className="inline-flex items-center px-4 py-2 bg-[#EDC577]/10 rounded-full border border-[#EDC577]/20">
+              {/*<div className="inline-flex items-center px-4 py-2 bg-[#EDC577]/10 rounded-full border border-[#EDC577]/20">
                 <span className="text-[#EDC577] font-semibold text-sm">
                   {advantage.stats}
                 </span>
-              </div>
+              </div>*/}
             </motion.div>
           ))}
         </div>
@@ -203,14 +204,20 @@ const WhyChooseUs: React.FC = () => {
             Media to showcase their work at the highest level.
           </p>*/}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/30 transition-all duration-300 hover:scale-105">
-              Start Your Project
+            <Link
+              href="#services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#EDC577]/30 transition-all duration-300 hover:scale-105"
+            >
+              Explore Services
               <Camera className="ml-2 w-5 h-5" />
-            </button>
-            <button className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300">
-              View Our Portfolio
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:border-[#EDC577] hover:bg-[#EDC577]/10 transition-all duration-300"
+            >
+              Contact Us
               <Building2 className="ml-2 w-5 h-5" />
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>
