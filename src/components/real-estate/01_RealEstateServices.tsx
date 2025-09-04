@@ -110,9 +110,9 @@ const RealEstateServices = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-            Real Estate{" "}
+            High-end Real Estate <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8E6B0F] via-[#EDC577] to-[#C89B2C]">
-              Services
+              Media and Marketing
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">

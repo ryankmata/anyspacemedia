@@ -64,12 +64,8 @@ const SmallBusinessCommercialCTA = () => {
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-400 pt-8 border-t border-white/10">
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-[#EDC577]" />
-              <span>Available 7 Days a Week</span>
-            </div>
-            <div className="flex items-center gap-2">
               <Award className="w-5 h-5 text-[#EDC577]" />
-              <span>150+ Successful Projects</span>
+              <span>3000+ Successful Projects</span>
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-[#EDC577]" />
