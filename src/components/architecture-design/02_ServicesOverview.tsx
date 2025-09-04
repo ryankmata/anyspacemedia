@@ -90,7 +90,7 @@ const ServicesOverview: React.FC = () => {
     }
   > = {
     photography: {
-      title: "Photography Services",
+      title: "Photography",
       icon: <Camera className="w-6 h-6" />,
       description:
         "Professional architectural and interior photography that showcases spaces at their finest",
